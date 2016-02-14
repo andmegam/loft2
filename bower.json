@@ -1,0 +1,24 @@
+{
+  "name": "loft2",
+  "authors": [
+    "Mashkov Andrey <andmmm@mail.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.12.0",
+    "jquery.placeholder": "^0.2.4"
+  }
+}
