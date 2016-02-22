@@ -1,0 +1,27 @@
+include _sections/_mixins.jade
+doctype html
+html(lang='ru')
+meta(charset='utf-8')
+meta(http-equiv="X-UA-Compatible" content="IE=edge")
+meta(name="viewport" content="width=1230, initial-scale=1")
+title
+	block title
+link(rel="stylesheet" href="css/main.css")
+link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
+link(rel="icon" href="img/favicon.ico" type="image/x-icon")
+body.body
+	div.wrapper
+		include _sections/_header.jade
+		include _sections/_breadcrumbs.jade
+
+		div.general
+			include _sections/_aside.jade
+			block content_main
+			block content_bottom
+		div.empty
+	footer.footer
+		include _sections/_footer.jade
+
+
+
+

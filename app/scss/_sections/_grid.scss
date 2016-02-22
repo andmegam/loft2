@@ -1,0 +1,64 @@
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: 'open_sansregular';
+}
+* { box-sizing: border-box; }
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.icon {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 0;
+}
+
+.wrapper {
+	min-height: 100%;
+	min-width: 1200px;
+	height: auto !important;
+	height: 100%;
+	margin: 0 0 -222px 0;
+	background-color: $bgcolor;
+}
+
+.header {
+	height: 225px;
+}
+
+.general {
+	@extend %clearfix;
+	@extend %conteiner;
+}
+
+.aside {
+	float:left;
+	width: 333px;
+}
+
+.main {
+	float: right;
+	width: 743px;
+}
+
+.info {
+	clear: both;
+	background-color: #4238C9;
+	height: 150px;  /*Удалить*/
+	margin-bottom: 25px;
+}
+
+.empty {
+	height: 222px;
+}
+
+.footer {
+	display: block;
+	height: 222px;
+	margin-top: -222px;
+	background-image: url('../img/footerbg.png');
+}

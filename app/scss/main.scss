@@ -1,0 +1,59 @@
+$green : #349234;
+
+@import "compass";
+
+/*
+ *  GENERAL
+ */
+/* --------- _mixins begin ------ */
+@import "_general/_mixins";
+/* --------- _mixins end -------- */
+/* --------- _normalize begin --- */
+@import "_general/_normalize";
+/* --------- _normalize end ------ */
+
+/* --------- _fonts begin -------- */
+@import "_general/_fonts";
+/* --------- _fonts end ---------- */
+
+/* --------- sprite begin -------- */
+@import "_general/_sprite";
+/* --------- sprite end ---------- */
+
+/* --------- jquery.formstyler begin -------- */
+@import "_general/_jquery.formstyler";
+/* --------- jquery.formstyler end ---------- */
+
+/*
+ *  SECTIONS
+ */
+
+/* --------- _grid begin -------- */
+@import "_sections/_grid";
+/* --------- _grid end ---------- */
+
+/* --------- _header begin ------ */
+@import "_sections/_header";
+/* --------- _header end -------- */
+
+/* --------- _breadcrumbs begin ------ */
+@import "_sections/_breadcrumbs";
+/* --------- _breadcrumbs end -------- */
+
+/* --------- _aside begin ------ */
+@import "_sections/_aside";
+/* --------- _aside end -------- */
+
+/* --------- _footer begin ------ */
+@import "_sections/_footer";
+/* --------- _footer end -------- */
+
+/*
+ *  LAYAUT
+ */
+
+/* --------- _index begin ------ */
+@import "_layaut/_index";
+/* --------- _index end -------- */
+
+

@@ -1,0 +1,25 @@
+extends ../main
+
+block title 
+	| Каталог мобильныех телефонов
+
+block content_main 
+	main.main
+		section.view
+			div.sorting Сортировать по
+				select.sorting-list
+					option.sorting-item(value="sort-mony") по цене
+					option.sorting-item(value="sort-rating") по популярности
+			div.viewcatalog Вид каталога
+			ul.viewcatalog__list
+				li.viewcatalog__item
+					a.viewcatalog__link.viewtable(href="#" title="Таблица") viewtable
+				li.viewcatalog__item
+					a.viewcatalog__link.viewcontent.activ(href="#" title="Содержимое") viewcontent
+				li.viewcatalog__item
+					a.viewcatalog__link.viewlist(href="#" title="Список") viewlist
+					
+
+block content_bottom 
+	div.info
+		| Дополнительный контент

@@ -1,0 +1,298 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$contacts-map-name: 'contacts-map';
+$contacts-map-x: 43px;
+$contacts-map-y: 112px;
+$contacts-map-offset-x: -43px;
+$contacts-map-offset-y: -112px;
+$contacts-map-width: 11px;
+$contacts-map-height: 16px;
+$contacts-map-total-width: 155px;
+$contacts-map-total-height: 128px;
+$contacts-map-image: '../img/sprite.png';
+$contacts-map: (43px, 112px, -43px, -112px, 11px, 16px, 155px, 128px, '../img/sprite.png', 'contacts-map', );
+$contacts-phone-name: 'contacts-phone';
+$contacts-phone-x: 32px;
+$contacts-phone-y: 112px;
+$contacts-phone-offset-x: -32px;
+$contacts-phone-offset-y: -112px;
+$contacts-phone-width: 11px;
+$contacts-phone-height: 16px;
+$contacts-phone-total-width: 155px;
+$contacts-phone-total-height: 128px;
+$contacts-phone-image: '../img/sprite.png';
+$contacts-phone: (32px, 112px, -32px, -112px, 11px, 16px, 155px, 128px, '../img/sprite.png', 'contacts-phone', );
+$fbbottom-hover-name: 'fbbottom-hover';
+$fbbottom-hover-x: 86px;
+$fbbottom-hover-y: 0px;
+$fbbottom-hover-offset-x: -86px;
+$fbbottom-hover-offset-y: 0px;
+$fbbottom-hover-width: 43px;
+$fbbottom-hover-height: 43px;
+$fbbottom-hover-total-width: 155px;
+$fbbottom-hover-total-height: 128px;
+$fbbottom-hover-image: '../img/sprite.png';
+$fbbottom-hover: (86px, 0px, -86px, 0px, 43px, 43px, 155px, 128px, '../img/sprite.png', 'fbbottom-hover', );
+$fbbottom-name: 'fbbottom';
+$fbbottom-x: 0px;
+$fbbottom-y: 43px;
+$fbbottom-offset-x: 0px;
+$fbbottom-offset-y: -43px;
+$fbbottom-width: 43px;
+$fbbottom-height: 43px;
+$fbbottom-total-width: 155px;
+$fbbottom-total-height: 128px;
+$fbbottom-image: '../img/sprite.png';
+$fbbottom: (0px, 43px, 0px, -43px, 43px, 43px, 155px, 128px, '../img/sprite.png', 'fbbottom', );
+$fbtop-hover-name: 'fbtop-hover';
+$fbtop-hover-x: 129px;
+$fbtop-hover-y: 0px;
+$fbtop-hover-offset-x: -129px;
+$fbtop-hover-offset-y: 0px;
+$fbtop-hover-width: 26px;
+$fbtop-hover-height: 26px;
+$fbtop-hover-total-width: 155px;
+$fbtop-hover-total-height: 128px;
+$fbtop-hover-image: '../img/sprite.png';
+$fbtop-hover: (129px, 0px, -129px, 0px, 26px, 26px, 155px, 128px, '../img/sprite.png', 'fbtop-hover', );
+$fbtop-name: 'fbtop';
+$fbtop-x: 0px;
+$fbtop-y: 86px;
+$fbtop-offset-x: 0px;
+$fbtop-offset-y: -86px;
+$fbtop-width: 26px;
+$fbtop-height: 26px;
+$fbtop-total-width: 155px;
+$fbtop-total-height: 128px;
+$fbtop-image: '../img/sprite.png';
+$fbtop: (0px, 86px, 0px, -86px, 26px, 26px, 155px, 128px, '../img/sprite.png', 'fbtop', );
+$twbottom-hover-name: 'twbottom-hover';
+$twbottom-hover-x: 86px;
+$twbottom-hover-y: 43px;
+$twbottom-hover-offset-x: -86px;
+$twbottom-hover-offset-y: -43px;
+$twbottom-hover-width: 43px;
+$twbottom-hover-height: 43px;
+$twbottom-hover-total-width: 155px;
+$twbottom-hover-total-height: 128px;
+$twbottom-hover-image: '../img/sprite.png';
+$twbottom-hover: (86px, 43px, -86px, -43px, 43px, 43px, 155px, 128px, '../img/sprite.png', 'twbottom-hover', );
+$twbottom-name: 'twbottom';
+$twbottom-x: 0px;
+$twbottom-y: 0px;
+$twbottom-offset-x: 0px;
+$twbottom-offset-y: 0px;
+$twbottom-width: 43px;
+$twbottom-height: 43px;
+$twbottom-total-width: 155px;
+$twbottom-total-height: 128px;
+$twbottom-image: '../img/sprite.png';
+$twbottom: (0px, 0px, 0px, 0px, 43px, 43px, 155px, 128px, '../img/sprite.png', 'twbottom', );
+$twtop-hover-name: 'twtop-hover';
+$twtop-hover-x: 26px;
+$twtop-hover-y: 86px;
+$twtop-hover-offset-x: -26px;
+$twtop-hover-offset-y: -86px;
+$twtop-hover-width: 26px;
+$twtop-hover-height: 26px;
+$twtop-hover-total-width: 155px;
+$twtop-hover-total-height: 128px;
+$twtop-hover-image: '../img/sprite.png';
+$twtop-hover: (26px, 86px, -26px, -86px, 26px, 26px, 155px, 128px, '../img/sprite.png', 'twtop-hover', );
+$twtop-name: 'twtop';
+$twtop-x: 52px;
+$twtop-y: 86px;
+$twtop-offset-x: -52px;
+$twtop-offset-y: -86px;
+$twtop-width: 26px;
+$twtop-height: 26px;
+$twtop-total-width: 155px;
+$twtop-total-height: 128px;
+$twtop-image: '../img/sprite.png';
+$twtop: (52px, 86px, -52px, -86px, 26px, 26px, 155px, 128px, '../img/sprite.png', 'twtop', );
+$viewcontent-hover-name: 'viewcontent-hover';
+$viewcontent-hover-x: 0px;
+$viewcontent-hover-y: 112px;
+$viewcontent-hover-offset-x: 0px;
+$viewcontent-hover-offset-y: -112px;
+$viewcontent-hover-width: 16px;
+$viewcontent-hover-height: 16px;
+$viewcontent-hover-total-width: 155px;
+$viewcontent-hover-total-height: 128px;
+$viewcontent-hover-image: '../img/sprite.png';
+$viewcontent-hover: (0px, 112px, 0px, -112px, 16px, 16px, 155px, 128px, '../img/sprite.png', 'viewcontent-hover', );
+$viewcontent-name: 'viewcontent';
+$viewcontent-x: 16px;
+$viewcontent-y: 112px;
+$viewcontent-offset-x: -16px;
+$viewcontent-offset-y: -112px;
+$viewcontent-width: 16px;
+$viewcontent-height: 16px;
+$viewcontent-total-width: 155px;
+$viewcontent-total-height: 128px;
+$viewcontent-image: '../img/sprite.png';
+$viewcontent: (16px, 112px, -16px, -112px, 16px, 16px, 155px, 128px, '../img/sprite.png', 'viewcontent', );
+$viewlist-hover-name: 'viewlist-hover';
+$viewlist-hover-x: 129px;
+$viewlist-hover-y: 52px;
+$viewlist-hover-offset-x: -129px;
+$viewlist-hover-offset-y: -52px;
+$viewlist-hover-width: 16px;
+$viewlist-hover-height: 16px;
+$viewlist-hover-total-width: 155px;
+$viewlist-hover-total-height: 128px;
+$viewlist-hover-image: '../img/sprite.png';
+$viewlist-hover: (129px, 52px, -129px, -52px, 16px, 16px, 155px, 128px, '../img/sprite.png', 'viewlist-hover', );
+$viewlist-name: 'viewlist';
+$viewlist-x: 129px;
+$viewlist-y: 68px;
+$viewlist-offset-x: -129px;
+$viewlist-offset-y: -68px;
+$viewlist-width: 16px;
+$viewlist-height: 16px;
+$viewlist-total-width: 155px;
+$viewlist-total-height: 128px;
+$viewlist-image: '../img/sprite.png';
+$viewlist: (129px, 68px, -129px, -68px, 16px, 16px, 155px, 128px, '../img/sprite.png', 'viewlist', );
+$viewtable-hover-name: 'viewtable-hover';
+$viewtable-hover-x: 129px;
+$viewtable-hover-y: 84px;
+$viewtable-hover-offset-x: -129px;
+$viewtable-hover-offset-y: -84px;
+$viewtable-hover-width: 16px;
+$viewtable-hover-height: 16px;
+$viewtable-hover-total-width: 155px;
+$viewtable-hover-total-height: 128px;
+$viewtable-hover-image: '../img/sprite.png';
+$viewtable-hover: (129px, 84px, -129px, -84px, 16px, 16px, 155px, 128px, '../img/sprite.png', 'viewtable-hover', );
+$viewtable-name: 'viewtable';
+$viewtable-x: 104px;
+$viewtable-y: 86px;
+$viewtable-offset-x: -104px;
+$viewtable-offset-y: -86px;
+$viewtable-width: 16px;
+$viewtable-height: 16px;
+$viewtable-total-width: 155px;
+$viewtable-total-height: 128px;
+$viewtable-image: '../img/sprite.png';
+$viewtable: (104px, 86px, -104px, -86px, 16px, 16px, 155px, 128px, '../img/sprite.png', 'viewtable', );
+$vkbottom-hover-name: 'vkbottom-hover';
+$vkbottom-hover-x: 43px;
+$vkbottom-hover-y: 43px;
+$vkbottom-hover-offset-x: -43px;
+$vkbottom-hover-offset-y: -43px;
+$vkbottom-hover-width: 43px;
+$vkbottom-hover-height: 43px;
+$vkbottom-hover-total-width: 155px;
+$vkbottom-hover-total-height: 128px;
+$vkbottom-hover-image: '../img/sprite.png';
+$vkbottom-hover: (43px, 43px, -43px, -43px, 43px, 43px, 155px, 128px, '../img/sprite.png', 'vkbottom-hover', );
+$vkbottom-name: 'vkbottom';
+$vkbottom-x: 43px;
+$vkbottom-y: 0px;
+$vkbottom-offset-x: -43px;
+$vkbottom-offset-y: 0px;
+$vkbottom-width: 43px;
+$vkbottom-height: 43px;
+$vkbottom-total-width: 155px;
+$vkbottom-total-height: 128px;
+$vkbottom-image: '../img/sprite.png';
+$vkbottom: (43px, 0px, -43px, 0px, 43px, 43px, 155px, 128px, '../img/sprite.png', 'vkbottom', );
+$vktop-hover-name: 'vktop-hover';
+$vktop-hover-x: 78px;
+$vktop-hover-y: 86px;
+$vktop-hover-offset-x: -78px;
+$vktop-hover-offset-y: -86px;
+$vktop-hover-width: 26px;
+$vktop-hover-height: 26px;
+$vktop-hover-total-width: 155px;
+$vktop-hover-total-height: 128px;
+$vktop-hover-image: '../img/sprite.png';
+$vktop-hover: (78px, 86px, -78px, -86px, 26px, 26px, 155px, 128px, '../img/sprite.png', 'vktop-hover', );
+$vktop-name: 'vktop';
+$vktop-x: 129px;
+$vktop-y: 26px;
+$vktop-offset-x: -129px;
+$vktop-offset-y: -26px;
+$vktop-width: 26px;
+$vktop-height: 26px;
+$vktop-total-width: 155px;
+$vktop-total-height: 128px;
+$vktop-image: '../img/sprite.png';
+$vktop: (129px, 26px, -129px, -26px, 26px, 26px, 155px, 128px, '../img/sprite.png', 'vktop', );
+$spritesheet-width: 155px;
+$spritesheet-height: 128px;
+$spritesheet-image: '../img/sprite.png';
+$spritesheet-sprites: ($contacts-map, $contacts-phone, $fbbottom-hover, $fbbottom, $fbtop-hover, $fbtop, $twbottom-hover, $twbottom, $twtop-hover, $twtop, $viewcontent-hover, $viewcontent, $viewlist-hover, $viewlist, $viewtable-hover, $viewtable, $vkbottom-hover, $vkbottom, $vktop-hover, $vktop, );
+$spritesheet: (155px, 128px, '../img/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Here are example usages in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+`display: inline-block` sprite:
+<img class="icon-home" />
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

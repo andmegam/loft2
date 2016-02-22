@@ -1,0 +1,63 @@
+.main {
+
+	.view {
+		@include border-radius(5px);
+		background-color: #e4ebee;
+		border: solid 1px #dee1e4;
+		//overflow: hidden;
+		display: table;
+		width: 100%;
+		height: 55px;
+		padding-left: 25px;
+		font-size: 14px;
+		font-family: 'open_sansregular';
+		color: #5d656c;
+
+		.sorting {
+			display: table-cell;
+			vertical-align: middle;
+			width: 350px;
+
+			.sorting-list {
+				font-size: 14px;
+				font-family: 'open_sanslight';
+				padding: 2px 10px;
+				width: 200px;
+			}
+		}
+
+		.viewcatalog {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: right;
+			padding-right: 10px;
+			width: 200px;
+		}
+
+		.viewcatalog__list {
+			font-size: 0;
+			float: right;
+
+			.viewcatalog__item {
+				height: 53px;
+				display: table-cell;
+				vertical-align: middle;
+				border-left: 1px solid #dee1e4;
+				padding: 0 17px;
+
+				.viewcatalog__link {
+					display: table-cell;
+					&.viewtable {@include sprite($viewtable);}
+					&.viewlist {@include sprite($viewlist);}
+					&.viewcontent {@include sprite($viewcontent);}
+
+					&.viewtable:hover, &.activ {@include sprite($viewtable-hover);}
+					&.viewlist:hover, &.activ {@include sprite($viewlist-hover);}
+					&.viewcontent:hover, &.activ {@include sprite($viewcontent-hover);}
+				}
+			}
+
+		}
+
+	}
+}

@@ -1,0 +1,26 @@
+$conteiner_width: 1130px;
+$bgcolor: #f4f4f4;
+
+%clearfix{
+	&:before, &:after{
+		content: "";
+		display: table;
+	}
+	&:after{
+		clear: both;
+	}
+}
+
+%conteiner{
+	width: $conteiner_width;
+	margin: 0 auto;
+	height: inherit;
+	padding: 0 15px;
+}
+
+@mixin border-radius($radius) {
+-webkit-border-radius: $radius;
+   -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+        border-radius: $radius;
+}
