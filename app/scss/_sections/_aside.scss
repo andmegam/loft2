@@ -12,7 +12,7 @@
 	.mobile-type__item {
 		padding: 11px 30px;
 		border-top: solid 1px #dee1e4;
-		&.activ {
+		&:hover, &.activ {
 			background-color: #d9e5ea;
 		}
 
@@ -26,10 +26,6 @@
 		font-size: 14px;
 		font-family: 'open_sansregular';
 		color: #5d656c;
-
-		&:hover {
-			color: #f60;
-		}
 	}
 
 /*

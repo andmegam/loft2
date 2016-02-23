@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 
 
     gulp.task('jade-compile', function() {
-      var YOUR_LOCALS = {'test':'Собака сутулая gulp'};
+      var YOUR_LOCALS = {};
       gulp.src('./app/markups/_pages/*.jade')
          .pipe(plumber())
          .pipe(jade({
@@ -52,6 +52,12 @@ var gulp = require('gulp'),
         }))
         .pipe(gulp.dest('./app/css/'));
     });
+    // gulp.task('sass', function () {
+    //   return gulp.src('app/sass/main.scss')
+    //     .pipe(plumber())
+    //     .pipe(sass().on('error', sass.logError))
+    //     .pipe(gulp.dest('./app/css'));
+    // });
 
     gulp.task('watch', function () {
       gulp.watch([

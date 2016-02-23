@@ -1,0 +1,55 @@
+-
+	var sams = {
+		'art': '189238',
+		'model': 'Samsung GT-I9301I GALAXY S 3 ',
+		'desc': 'Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц... ',
+		'price': '11 290',
+		'foto0': '../img/tovar-0.png',
+		'foto1': '../img/tovar-1.png',
+		'foto2': '../img/tovar-2.png',
+		'foto3': '../img/tovar-3.png'
+	}
+
+mixin product(item)
+	.products
+		ul.products__list
+			li.products__item
+				div.tovar
+					div.tovar-foto
+						div.tovar-foto__large
+							img.tovar-foto__large-img(src=item.foto0 alt=item.model)
+						ul.tovar-foto-small__list
+							li.tovar-foto-small__item
+								img.tovar-foto-small__item-img(src=item.foto1 alt=item.model)
+							li.tovar-foto-small__item
+								img.tovar-foto-small__item-img(src=item.foto2 alt=item.model)
+							li.tovar-foto-small__item
+								img.tovar-foto-small__item-img(src=item.foto3 alt=item.model)
+						div.tovar-art
+							span.tovar-art__type Артикул
+							span.tovar-art__number=item.art
+					div.tovar-descr
+						div.tovar-descr__name=item.model
+						div.tovar-descr__desc=item.desc
+						div.tovar-descr__rating
+							ul.rating__list
+								li.rating__item.starred
+									span.rating__star rating1
+								li.rating__item.starred
+									span.rating__star rating2
+								li.rating__item.starred
+									span.rating__star rating3
+								li.rating__item.starred
+									span.rating__star rating4
+								li.rating__item.starwhite
+									span.rating__star rating5
+							span.rating__number 4
+					div.tovar-money
+						div.tovar-money__price
+							span.tovar-money__price__number=item.price
+							i.fa.fa-rub
+						div.tovar-money__addtocart
+							button.tovar-money__addtocart__btn(type="submit") В корзину
+						div.tovar-money__outofstock
+							i.fa.fa-circle.tovar-money__outofstock__point
+							span.tovar-money__outofstock__status В наличии

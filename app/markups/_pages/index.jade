@@ -1,5 +1,6 @@
 extends ../main
 
+
 block title 
 	| Каталог мобильныех телефонов
 
@@ -18,7 +19,58 @@ block content_main
 					a.viewcatalog__link.viewcontent.activ(href="#" title="Содержимое") viewcontent
 				li.viewcatalog__item
 					a.viewcatalog__link.viewlist(href="#" title="Список") viewlist
-					
+		section.products.viewcontent
+			ul.products__list
+				li.products__item
+					div.tovar
+						div.tovar-foto
+							div.tovar-foto__large
+								img.tovar-foto__large-img(src="../img/tovar-0.png" alt="фото0")
+							ul.tovar-foto-small__list
+								li.tovar-foto-small__item
+									img.tovar-foto-small__item-img(src="../img/tovar-1.png" alt="фото1")
+								li.tovar-foto-small__item
+									img.tovar-foto-small__item-img(src="../img/tovar-2.png" alt="фото2")
+								li.tovar-foto-small__item
+									img.tovar-foto-small__item-img(src="../img/tovar-3.png" alt="фото3")
+							div.tovar-art
+								span.tovar-art__type Артикул
+								span.tovar-art__number 189238
+
+						div.tovar-descr
+							div.tovar-descr__name Samsung GT-I9301I GALAXY S 3
+							div.tovar-descr__desc 
+								| Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White
+								| Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0,
+								| EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4,
+								| Частота процессора 1400 МГц...
+							div.tovar-descr__rating
+								ul.rating__list
+									li.rating__item.starred
+										span.rating__star rating1
+									li.rating__item.starred
+										span.rating__star rating2
+									li.rating__item.starred
+										span.rating__star rating3
+									li.rating__item.starred
+										span.rating__star rating4
+									li.rating__item.starwhite
+										span.rating__star rating5
+								span.rating__number 4
+						div.tovar-money
+							div.tovar-money__price
+								span.tovar-money__price__number 11 290
+								i.fa.fa-rub
+							div.tovar-money__addtocart
+								button.tovar-money__addtocart__btn(type="submit") В корзину
+							div.tovar-money__outofstock
+								i.fa.fa-circle.tovar-money__outofstock__point
+								span.tovar-money__outofstock__status В наличии
+			+product(sams)
+				li.products__item 54454
+				li.products__item sdsd
+				li.products__item sdsd
+
 
 block content_bottom 
 	div.content_bottom
@@ -30,8 +82,9 @@ block content_bottom
 				| процесс внедрения и модернизации позиций, занимаемых участниками в отношении 
 				| поставленных задач. Значимость этих проблем настолько очевидна, что реализация 
 				| намеченных плановых заданий в значительной степени обуславливает создание модели  
-				| развития. Таким образом консультация с широким активом представляет собой интересный |
+				| развития. Таким образом консультация с широким активом представляет собой интересный 
 				| эксперимент проверки модели развития.
+
 			p.par
 				| Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет 
 				| оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким 

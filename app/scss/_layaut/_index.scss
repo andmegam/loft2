@@ -12,6 +12,7 @@
 		font-size: 14px;
 		font-family: 'open_sansregular';
 		color: #5d656c;
+		margin-bottom: 18px;
 
 		.sorting {
 			display: table-cell;
@@ -58,6 +59,217 @@
 			}
 
 		}
-
 	}
+
+	.products {
+		background-color: #fbfbfb;
+		@include border-radius(5px);
+		border: solid 1px #dee1e4;
+	}
+
+	// Второй вид
+	.viewcontent {
+		.products__list {
+			// background-color: yellow;
+			.products__item {
+				padding: 20px 25px 13px 20px;
+				border-top: solid 1px #dee1e4;
+
+				&:first-child {
+					border-top: 0;
+				}
+
+				.tovar {
+					display: table;
+					position: relative;
+
+					.tovar-foto {
+						// background-color: orange;
+						display: table-cell;
+						width: 140px;
+
+						.tovar-foto__large {
+							width: 136px;
+							height: 136px;
+							background-color: #FFF;
+							border: 1px solid #dee1e4;
+							padding: 5px;
+							text-align: center;
+							@include border-radius(2px);
+							margin-bottom: 15px;
+						}
+
+						.tovar-foto-small__list {
+							margin-bottom: 4px;
+
+							.tovar-foto-small__item {
+								width: 35px;
+								height: 35px;
+								display: inline-block;
+								@include border-radius(2px);
+								border: 1px solid #dee1e4;
+								text-align: center;
+								vertical-align: middle;
+								margin-right: 10px;
+								padding: 2px;
+
+								&:last-child {
+									margin-right: 0;
+								}
+
+								&:hover {
+									border: 1px solid #F60;
+								}
+							}
+						}
+
+						.tovar-art {
+							text-align: center;
+
+							.tovar-art__type {
+								font-size: 12px;
+								font-family: 'open_sansbold';
+								margin-right: 5px;
+								color: #7f7f7f;
+							}
+
+							.tovar-art__number {
+								font-size: 14px;
+								font-family: 'open_sansbold';
+								color: #333;
+							}
+						}
+					}
+
+					.tovar-descr {
+						display: table-cell;
+						vertical-align: top;
+						width: 430px;
+						padding: 0 22px;
+						font-size: 16px;
+
+						.tovar-descr__name {
+							font-size: 16px;
+							padding: 5px 0 20px 0;
+							font-family: 'open_sanssemibold';
+						}
+
+						.tovar-descr__desc {
+							font-size: 14px;
+							height: 90px;
+							overflow: hidden;
+							font-family: 'open_sansregular';
+						}
+
+						.rating__list {
+							display: inline-block;
+							// background-color: yellow;
+							margin-right: 15px;
+							.rating__item {
+								width: 15px;
+								height: 15px;
+								display: inline-block;
+								vertical-align: middle;
+								font-size: 0;
+
+								&.starred {
+									@include sprite($starred);
+								}
+
+								&.starwhite {
+									@include sprite($starwhite);
+								}
+							}
+
+						}
+						.rating__number {
+
+							padding: 0 10px;
+							background-color: #b5beca;
+							font-size: 12px;
+							font-family: 'open_sansbold';
+							color: #FFF;
+							@include border-radius(10px);
+						}
+
+					}
+					.tovar-money {
+						&:after {
+							content : "";
+							width: 1px;
+							position: absolute;
+							top:0;
+							height: 200px;
+							background-color: #dee1e4;
+						}
+
+
+						display: table-cell;
+						vertical-align: top;
+						width: 125px;
+
+						.tovar-money__price {
+							text-align: right;
+							margin-bottom: 125px;
+
+							.tovar-money__price__number {
+								font-size: 20px;
+								font-family: 'open_sanssemibold';
+								margin-right: 3px;
+							}
+						}
+						.tovar-money__addtocart {
+							width: 100%;
+							text-align: right;
+
+							.tovar-money__addtocart__btn {
+								width: 103px;
+								height: 33px;
+								margin-bottom: 2px;
+								color: #FFF;
+								font-size: 14px;
+								font-family: 'open_sansbold';
+
+								border: 1px solid transparent;
+								outline: 0 !important;
+
+								-webkit-border-radius: 0 3px 3px 0;
+								-moz-border-radius: 0 3px 3px 0;
+								@include border-radius(5px);
+								background-color: #f60;
+								background-image: -webkit-linear-gradient(56deg, #f60, #ff6e35 99%);
+								background-image: -moz-linear-gradient(56deg, #f60, #ff6e35 99%);
+								background-image: -o-linear-gradient(56deg, #f60, #ff6e35 99%);
+								background-image: -ms-linear-gradient(56deg, #f60, #ff6e35 99%);
+								background-image: linear-gradient(56deg, #f60, #ff6e35 99%);
+
+								&:hover {
+									font-size: 15px;
+								}
+							}
+						}
+						.tovar-money__outofstock {
+							text-align: right;
+							.tovar-money__outofstock__point {
+								font-size: 7px;
+								color: #60ac49;
+								display: inline-block;
+								vertical-align: middle;
+							}
+
+							.tovar-money__outofstock__status {
+								font-size: 12px;
+								font-family: 'open_sansbold';
+								color: #7f7f7f;
+								padding-left: 5px;
+							}
+						}
+
+					}
+				}
+
+			}
+		}
+	} // .viewcontent
+
 }
