@@ -18,6 +18,12 @@ $bgcolor: #f4f4f4;
 	padding: 0 15px;
 }
 
+%colorblock {
+	display: block;
+	width: 37px;
+	height: 37px;
+}
+
 @mixin border-radius($radius) {
 -webkit-border-radius: $radius;
    -moz-border-radius: $radius;

@@ -4,7 +4,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=1230, initial-scale=1">
 <title>Каталог мобильныех телефонов</title>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/jquery-ui.css">
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 <body class="body">
@@ -68,6 +70,107 @@
 					<li class="mobile-type__item"><a href="#" class="mobile-type__link">Флагманы</a></li>
 					<li class="mobile-type__item activ"><a href="#" class="mobile-type__link">Бюджетная линейка</a></li>
 				</ul>
+				<ul class="filters__list">
+					<li class="filters__item"><a href="#" class="filters__link">Наличие в магазинах<i class="arrow icon">arrow</i></a>
+						<div class="filter__inner">
+							<ul class="instore__list radiogroup">
+								<li class="instore__item">
+									<input type="radio" checked name="filter" id="all_stores" class="radio">
+									<label for="all_stores" class="label">Во всех магазинах</label>
+								</li>
+								<li class="instore__item">
+									<input type="radio" name="filter" id="nearest_store" class="radio">
+									<label for="nearest_store" class="label">В ближайшем ко мне магазине</label>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="filters__item"><a href="#" class="filters__link">Бренды<i class="arrow icon">arrow</i></a>
+						<div class="filter__inner">
+							<ul class="brand__list checkboxgroup">
+								<li class="brand__item">
+									<input type="checkbox" name="lenovo" id="lenovo" class="checkbox">
+									<label for="lenovo" class="label">Lenovo</label>
+								</li>
+								<li class="brand__item">
+									<input type="checkbox" name="apple" id="apple" class="checkbox">
+									<label for="apple" class="label">Apple</label>
+								</li>
+								<li class="brand__item">
+									<input type="checkbox" name="samsung" id="samsung" class="checkbox">
+									<label for="samsung" class="label">Samsung</label>
+								</li>
+								<li class="brand__item">
+									<input type="checkbox" name="asus" id="asus" class="checkbox">
+									<label for="asus" class="label">Asus</label>
+								</li>
+								<li class="brand__item">
+									<input type="checkbox" name="motorola" id="motorola" class="checkbox">
+									<label for="motorola" class="label">Motorola</label>
+								</li>
+							</ul><a href="#" class="filters__clear">Сбросить фильтр</a>
+						</div>
+					</li>
+					<li class="filters__item"><a href="#" class="filters__link">Цена<i class="arrow icon">arrow</i></a>
+						<div class="filter__inner">
+							<div class="money-range">
+								<div class="money-range__money_begin">
+									<label for="money-begin" class="money-range__label">от</label>
+									<input type="text" id="money-begin" class="money-range__money">
+								</div>
+								<div class="money-range__money_end">
+									<label for="money-end" class="money-range__label">до</label>
+									<input type="text" id="money-end" class="money-range__money">
+								</div>
+							</div>
+							<div id="slider-range" class="money-range__slider"></div>
+						</div>
+					</li>
+					<li class="filters__item"><a href="#" class="filters__link">Цвет<i class="arrow icon">arrow</i></a>
+						<div class="filter__inner">
+							<ul class="color__list">
+								<li class="color__item"><span class="color__white"></span></li>
+								<li class="color__item activ"><span class="color__very-light-grey"></span></li>
+								<li class="color__item"><span class="color__black"></span></li>
+								<li class="color__item"><span class="color__prussian-blue"></span></li>
+								<li class="color__item"><span class="color__red"></span></li>
+								<li class="color__item"><span class="color__yellow"></span></li>
+								<li class="color__item"><span class="color__sunshade"></span></li>
+								<li class="color__item"><span class="color__gossip"></span></li>
+								<li class="color__item"><span class="color__summer-sky"></span></li>
+								<li class="color__item"><span class="color__ce-soir"></span></li>
+								<li class="color__item"><span class="color__pale-violet-red"></span></li>
+								<li class="color__item"><span class="color__russet"></span></li>
+							</ul>
+						</div>
+					</li>
+					<li class="filters__item"><a href="#" class="filters__link">Операционные системы<i class="arrow icon">arrow</i></a>
+						<div class="filter__inner">
+							<ul class="os__list checkboxgroup">
+								<li class="os__item">
+									<input type="checkbox" name="android" id="android" class="checkbox">
+									<label for="android" class="label">Android</label>
+								</li>
+								<li class="os__item">
+									<input type="checkbox" name="ios" id="ios" class="checkbox">
+									<label for="ios" class="label">iOS</label>
+								</li>
+								<li class="os__item">
+									<input type="checkbox" name="windowsmobile" id="windowsmobile" class="checkbox">
+									<label for="windowsmobile" class="label">Windows Mobile</label>
+								</li>
+								<li class="os__item">
+									<input type="checkbox" name="symbian" id="symbian" class="checkbox">
+									<label for="symbian" class="label">Symbian</label>
+								</li>
+								<li class="os__item">
+									<input type="checkbox" name="custom" id="custom" class="checkbox">
+									<label for="custom" class="label">Custom</label>
+								</li>
+							</ul><a href="#" class="filters__clear">Сбросить фильтр</a>
+						</div>
+					</li>
+				</ul>
 			</aside>
 			<main class="main">
 				<section class="view">
@@ -85,7 +188,57 @@
 					</ul>
 				</section>
 			</main>
-			<div class="info">Дополнительный контент</div>
+			<div class="content_bottom">
+				<div class="content_bottom_title">Важная информация</div>
+				<div class="content_bottom_text">
+					<p class="par">
+
+						Повседневная практика показывает, что сложившаяся структура организации влечет за собой
+						процесс внедрения и модернизации позиций, занимаемых участниками в отношении
+						поставленных задач. Значимость этих проблем настолько очевидна, что реализация
+						намеченных плановых заданий в значительной степени обуславливает создание модели
+						развития. Таким образом консультация с широким активом представляет собой интересный |
+						эксперимент проверки модели развития.
+					</p>
+					<p class="par">
+						Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет
+						оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким
+						бразом сложившаяся структура организации требуют определения и уточнения направлений
+						прогрессивного развития. Равным образом консультация с широким активом влечет за собой
+						процесс внедрения и модернизации соответствующий условий активизации
+					</p>
+					<p class="par">
+
+						Идейные соображения высшего порядка, а также начало повседневной работы по ормированию
+						позиции позволяет оценить значение соответствующий условий активизации. С другой
+						стороны сложившаяся структура организации позволяет оценить значение системы обучения
+						кадров, соответствует насущным потребностям.
+					</p>
+					<p class="par">
+
+						Повседневная практика показывает, что сложившаяся структура организации влечет за собой
+						процесс внедрения и модернизации позиций, занимаемых участниками в отношении
+						поставленных задач. Значимость этих проблем настолько очевидна, что реализация
+						намеченных плановых заданий в значительной степени обуславливает создание модели
+						развития. Таким образом консультация с широким активом представляет собой интересный
+						эксперимент проверки модели развития.
+					</p>
+					<p class="par">
+						Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет
+						оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким
+						бразом сложившаяся структура организации требуют определения и уточнения направлений
+						прогрессивного развития. Равным образом консультация с широким активом влечет за собой
+						процесс внедрения и модернизации соответствующий условий активизации
+					</p>
+					<p class="par">
+
+						Идейные соображения высшего порядка, а также начало повседневной работы по ормированию
+						позиции позволяет оценить значение соответствующий условий активизации. С другой
+						стороны сложившаяся структура организации позволяет оценить значение системы обучения
+						кадров, соответствует насущным потребностям.
+					</p>
+				</div>
+			</div>
 		</div>
 		<div class="empty"></div>
 	</div>
@@ -118,6 +271,8 @@
 		<div class="footer-bottom"><span class="copyright">  All rights reserved. 2016. no copy alowed</span></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery-1.12.0.min.js"><\/script>');</script>
 		<script src="js/jquery.formstyler.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/jquery.columnizer.min.js"></script>
 		<script src="js/main.js"></script>
 	</footer>
 </body>
