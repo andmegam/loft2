@@ -1777,6 +1777,7 @@ input[type=checkbox] {
   vertical-align: middle;
   border-left: 1px solid #dee1e4;
   padding: 0 17px;
+  cursor: pointer;
 }
 .main .view .viewcatalog__list .viewcatalog__item .viewcatalog__link {
   display: table-cell;
@@ -1799,19 +1800,19 @@ input[type=checkbox] {
   width: 16px;
   height: 16px;
 }
-.main .view .viewcatalog__list .viewcatalog__item .viewcatalog__link.viewtable:hover, .main .view .viewcatalog__list .viewcatalog__item .viewcatalog__link.activ {
+.main .view .viewcatalog__list .viewcatalog__item.activ .viewcatalog__link.viewtable, .main .view .viewcatalog__list .viewcatalog__item:hover .viewcatalog__link.viewtable {
   background-image: url(../img/sprite.png);
   background-position: -129px -52px;
   width: 16px;
   height: 16px;
 }
-.main .view .viewcatalog__list .viewcatalog__item .viewcatalog__link.viewlist:hover, .main .view .viewcatalog__list .viewcatalog__item .viewcatalog__link.activ {
+.main .view .viewcatalog__list .viewcatalog__item.activ .viewcatalog__link.viewlist, .main .view .viewcatalog__list .viewcatalog__item:hover .viewcatalog__link.viewlist {
   background-image: url(../img/sprite.png);
   background-position: -104px -86px;
   width: 16px;
   height: 16px;
 }
-.main .view .viewcatalog__list .viewcatalog__item .viewcatalog__link.viewcontent:hover, .main .view .viewcatalog__list .viewcatalog__item .viewcatalog__link.activ {
+.main .view .viewcatalog__list .viewcatalog__item.activ .viewcatalog__link.viewcontent, .main .view .viewcatalog__list .viewcatalog__item:hover .viewcatalog__link.viewcontent {
   background-image: url(../img/sprite.png);
   background-position: -129px -68px;
   width: 16px;
@@ -2003,6 +2004,134 @@ input[type=checkbox] {
   vertical-align: middle;
 }
 .main .viewcontent .products__list .products__item .tovar .tovar-money .tovar-money__outofstock .tovar-money__outofstock__status {
+  font-size: 12px;
+  font-family: 'open_sansbold';
+  color: #7f7f7f;
+  padding-left: 5px;
+}
+.main .viewlist .products__list .products__item {
+  padding: 10px 10px 5px 10px;
+  border-top: solid 1px #dee1e4;
+}
+.main .viewlist .products__list .products__item:first-child {
+  border-top: 0;
+}
+.main .viewlist .products__list .products__item:hover {
+  box-shadow: -1px 1px 5.7px 1px rgba(118, 118, 118, 0.75);
+}
+.main .viewlist .products__list .products__item .tovar {
+  display: table;
+  position: relative;
+  cursor: pointer;
+}
+.main .viewlist .products__list .products__item .tovar .tovar-foto {
+  display: table-cell;
+  width: 110px;
+}
+.main .viewlist .products__list .products__item .tovar .tovar-foto .tovar-foto__large {
+  display: none;
+}
+.main .viewlist .products__list .products__item .tovar .tovar-foto .tovar-foto-small__list {
+  display: none;
+}
+.main .viewlist .products__list .products__item .tovar .tovar-foto .tovar-art {
+  text-align: left;
+  vertical-align: middle;
+  padding-top: 5px;
+}
+.main .viewlist .products__list .products__item .tovar .tovar-foto .tovar-art .tovar-art__type {
+  font-size: 12px;
+  font-family: 'open_sansbold';
+  margin-right: 5px;
+  color: #7f7f7f;
+}
+.main .viewlist .products__list .products__item .tovar .tovar-foto .tovar-art .tovar-art__number {
+  font-size: 14px;
+  font-family: 'open_sansbold';
+  color: #333;
+}
+.main .viewlist .products__list .products__item .tovar .tovar-descr {
+  display: table-cell;
+  vertical-align: middle;
+  width: 285px;
+  padding: 0 10px;
+  font-size: 16px;
+}
+.main .viewlist .products__list .products__item .tovar .tovar-descr .tovar-descr__name {
+  display: none;
+  /*font-size: 16px;
+  padding: 0 0 20px 0;
+  font-family: 'open_sanssemibold';*/
+}
+.main .viewlist .products__list .products__item .tovar .tovar-descr .tovar-descr__desc {
+  width: 285px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'open_sansregular';
+}
+.main .viewlist .products__list .products__item .tovar .tovar-descr .rating__list {
+  display: none;
+}
+.main .viewlist .products__list .products__item .tovar .tovar-descr .rating__number {
+  display: none;
+}
+.main .viewlist .products__list .products__item .tovar .tovar-money {
+  display: table-cell;
+  vertical-align: top;
+  margin-top: -7px;
+  width: 305px;
+}
+.main .viewlist .products__list .products__item .tovar .tovar-money .tovar-money__price {
+  width: 80px;
+  float: left;
+}
+.main .viewlist .products__list .products__item .tovar .tovar-money .tovar-money__price .tovar-money__price__number {
+  font-size: 20px;
+  font-family: 'open_sanssemibold';
+  margin-right: 3px;
+}
+.main .viewlist .products__list .products__item .tovar .tovar-money .tovar-money__addtocart {
+  width: 103px;
+  float: right;
+  background-color: yellow;
+}
+.main .viewlist .products__list .products__item .tovar .tovar-money .tovar-money__addtocart .tovar-money__addtocart__btn {
+  width: 103px;
+  height: 33px;
+  color: #FFF;
+  font-size: 14px;
+  font-family: 'open_sansbold';
+  border: 1px solid transparent;
+  outline: 0 !important;
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #f60;
+  background-image: -webkit-linear-gradient(56deg, #f60, #ff6e35 99%);
+  background-image: -moz-linear-gradient(56deg, #f60, #ff6e35 99%);
+  background-image: -o-linear-gradient(56deg, #f60, #ff6e35 99%);
+  background-image: -ms-linear-gradient(56deg, #f60, #ff6e35 99%);
+  background-image: linear-gradient(56deg, #ff6600, #ff6e35 99%);
+}
+.main .viewlist .products__list .products__item .tovar .tovar-money .tovar-money__addtocart .tovar-money__addtocart__btn:hover {
+  font-size: 15px;
+}
+.main .viewlist .products__list .products__item .tovar .tovar-money .tovar-money__outofstock {
+  float: right;
+  margin: 5px 20px 0 0;
+}
+.main .viewlist .products__list .products__item .tovar .tovar-money .tovar-money__outofstock .tovar-money__outofstock__point {
+  font-size: 7px;
+  color: #60ac49;
+  display: inline-block;
+  vertical-align: middle;
+}
+.main .viewlist .products__list .products__item .tovar .tovar-money .tovar-money__outofstock .tovar-money__outofstock__status {
   font-size: 12px;
   font-family: 'open_sansbold';
   color: #7f7f7f;

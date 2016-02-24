@@ -50,13 +50,6 @@
           duration = 800;
 
       if (!$this.hasClass('activ')) {
-
-        items.removeClass('activ');
-        // Закрытие контента
-        otherContent.stop(true).slideUp( function(){
-          $this.removeClass('activ'), duration
-        })
-
         // Открытие контента
         content.stop(true).slideDown( function(){
           $this.addClass('activ'), duration
@@ -67,6 +60,26 @@
           $this.removeClass('activ'), duration
         })
       }
+  });
+
+  // Смена вида товара
+  $('.viewcatalog__item').on('click', function (event) {
+    event.preventDefault();
+    var $this = $(this),
+        view = 'products ' +
+          $this
+          .find('.viewcatalog__link')
+          .attr('class')
+          .replace('viewcatalog__link', '');
+
+      $this
+        .addClass('activ')
+        .siblings()
+        .removeClass('activ');
+
+      $('.products')
+        .removeClass()
+        .addClass(view);
   });
 
 })();
