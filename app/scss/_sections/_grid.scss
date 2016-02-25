@@ -5,7 +5,10 @@ html, body {
 	font-family: 'open_sansregular';
 	color: #333;
 }
-* { box-sizing: border-box; }
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; }
 
 ul {
 	list-style: none;
@@ -20,6 +23,12 @@ ul {
 	color: #333;
 	line-height: 20px;
 	text-align: justify;
+}
+
+.title-section {
+	font-size: 20px;
+	font-family: 'open_sansbold';
+	color: #333;
 }
 
 .icon {

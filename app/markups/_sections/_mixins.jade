@@ -1,55 +1,165 @@
+-var path = "../";
+-var path = "../loft2/";
 -
-	var sams = {
+	var samsung = {
 		'art': '189238',
-		'model': 'Samsung GT-I9301I GALAXY S 3 ',
+		'model': 'Samsung GT-I9301I GALAXY S 3',
 		'desc': 'Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц... ',
 		'price': '11 290',
-		'foto0': '../img/tovar-0.png',
-		'foto1': '../img/tovar-1.png',
-		'foto2': '../img/tovar-2.png',
-		'foto3': '../img/tovar-3.png'
+		'foto1': 'img/products/samsung-1.png',
+		'foto2': 'img/products/samsung-2.png',
+		'foto3': 'img/products/samsung-3.png',
+		'typesim':'Micro-SIM',
+		'countsim':'1',
+		'color':'Белый',
+		'os':'Android',
+		'g3':'Есть',
+		'g4':'Нет',
+		'gps':'Есть',
+		'reiting': '3.5'
 	}
 
-mixin product(item)
-	.products
-		ul.products__list
-			li.products__item
-				div.tovar
-					div.tovar-foto
-						div.tovar-foto__large
-							img.tovar-foto__large-img(src=item.foto0 alt=item.model)
-						ul.tovar-foto-small__list
-							li.tovar-foto-small__item
-								img.tovar-foto-small__item-img(src=item.foto1 alt=item.model)
-							li.tovar-foto-small__item
-								img.tovar-foto-small__item-img(src=item.foto2 alt=item.model)
-							li.tovar-foto-small__item
-								img.tovar-foto-small__item-img(src=item.foto3 alt=item.model)
-						div.tovar-art
-							span.tovar-art__type Артикул
-							span.tovar-art__number=item.art
-					div.tovar-descr
-						div.tovar-descr__name=item.model
-						div.tovar-descr__desc=item.desc
-						div.tovar-descr__rating
-							ul.rating__list
-								li.rating__item.starred
-									span.rating__star rating1
-								li.rating__item.starred
-									span.rating__star rating2
-								li.rating__item.starred
-									span.rating__star rating3
-								li.rating__item.starred
-									span.rating__star rating4
-								li.rating__item.starwhite
-									span.rating__star rating5
-							span.rating__number 4
-					div.tovar-money
-						div.tovar-money__price
-							span.tovar-money__price__number=item.price
-							i.fa.fa-rub
-						div.tovar-money__addtocart
-							button.tovar-money__addtocart__btn(type="submit") В корзину
-						div.tovar-money__outofstock
-							i.fa.fa-circle.tovar-money__outofstock__point
-							span.tovar-money__outofstock__status В наличии
+	var lumia640 = {
+		'art': '321559',
+		'model': 'Microsoft Lumia 640 RM-1077',
+		'desc': 'Смартфон Microsoft Lumia 640 Dual SIM (RM-1077) С ним вы открываете мир ярких цифровых возможностей. Этот многофункциональный смартфон уже содержит набор бесплатных сервисов Microsoft...',
+		'price': '10 990',
+		'foto1': 'img/products/lumia640-1.png',
+		'foto2': 'img/products/lumia640-2.png',
+		'foto3': 'img/products/lumia640-3.png',
+		'typesim':'Micro-SIM',
+		'countsim':'2',
+		'color':'Черный',
+		'os':'Windows Phone',
+		'g3':'Есть',
+		'g4':'Нет',
+		'gps':'A-GPS',
+		'reiting': '2.5'
+	}
+
+	var archos = {
+		'art': '132489',
+		'model': 'Archos 50 Oxygen Plus',
+		'desc': 'Смартфон Archos 50 Oxygen Plus, серый. Моноблок, Micro-SIM, Android , 3G, Bluetooth, USB-подключение к ПК, Wi-Fi, Разрешение основной камеры 8 Мп...',
+		'price': '9 900',
+		'foto1': 'img/products/archos-1.png',
+		'foto2': 'img/products/archos-2.png',
+		'foto3': 'img/products/archos-3.png',
+		'typesim':'Micro-SIM',
+		'countsim':'2',
+		'color':'Серый',
+		'os':'Android',
+		'g3':'Есть',
+		'g4':'Нет',
+		'gps':'Есть',
+		'reiting': '4'
+	}	
+
+	var alcatel = {
+		'art': '321489',
+		'model': 'Alcatel OT4013D PIXI 3 (2 SIM)',
+		'desc': 'Смартфон Смартфон Alcatel OT4013D PIXI 3 (2 SIM). Смартфон Alcatel One Touch 4013D оснащен четырехдюймовым дисплеем и двумя слотами для SIM-карт...',
+		'price': '3 990',
+		'foto1': 'img/products/alcatel-1.png',
+		'foto2': 'img/products/alcatel-2.png',
+		'foto3': 'img/products/alcatel-3.png',
+		'typesim':'Micro-SIM',
+		'countsim':'2',
+		'color':'Серый',
+		'os':'Android',
+		'g3':'Есть',
+		'g4':'Нет',
+		'gps':'A-GPS',
+		'reiting': '5'
+	}
+	var fly = {
+		'art': '987441',
+		'model': 'Fly IQ434 Era Nano 5',
+		'desc': 'Смартфон Fly IQ434 Era Nano 5 оснащен 3.5" дисплеем и двумя слотами для SIM-карт. Android 2.3, Micro SD, Wi-Fi...',
+		'price': '1 790',
+		'foto1': 'img/products/fly-1.png',
+		'foto2': 'img/products/fly-2.png',
+		'foto3': 'img/products/fly-3.png',
+		'typesim':'Micro-SIM',
+		'countsim':'2',
+		'color':'Черный',
+		'os':'Android',
+		'g3':'Нет',
+		'g4':'Нет',
+		'gps':'Нет',
+		'reiting': '3'
+	}
+
+	var highscreen = {
+		'art': '451781',
+		'model': 'HIGHSCREEN WinWin Black',
+		'desc': 'Смартфон HIGHSCREEN WinWin Black оснащен 4" дисплеем и двумя слотами для SIM-карт. Windows Phone , 3G, Bluetooth, USB-подключение к ПК...',
+		'price': '3 900',
+		'foto1': 'img/products/highscreen-1.png',
+		'foto2': 'img/products/highscreen-2.png',
+		'foto3': 'img/products/highscreen-3.png',
+		'typesim':'Micro-SIM',
+		'countsim':'2',
+		'color':'Черный',
+		'os':'Windows Phone',
+		'g3':'Есть',
+		'g4':'Нет',
+		'gps':'Есть',
+		'reiting': '4.5'
+	}	
+
+mixin product(item, path)
+		li.products__item
+			div.tovar
+				div.tovar-foto
+					div.tovar-foto__large
+						img.tovar-foto__large-img(src=path+item.foto1 alt=item.model)
+					ul.tovar-foto-small__list
+						li.tovar-foto-small__item.activ
+							img.tovar-foto-small__item-img(src=path+item.foto1 alt=item.model)
+						li.tovar-foto-small__item
+							img.tovar-foto-small__item-img(src=path+item.foto2 alt=item.model)
+						li.tovar-foto-small__item
+							img.tovar-foto-small__item-img(src=path+item.foto3 alt=item.model)
+					div.tovar-art
+						span.tovar-art__type Артикул
+						span.tovar-art__number=item.art
+				div.tovar-descr
+					div.tovar-descr__name=item.model
+					div.tovar-descr__desc=item.desc
+					div.tovar-characteristics
+						ul.tovar-characteristics__list
+							li.tovar-characteristics__item
+								span.characteristics__type Тип SIM-карты
+								span.characteristics__desc=item.typesim
+							li.tovar-characteristics__item
+								span.characteristics__type Количество SIM-карт
+								span.characteristics__desc=item.countsim
+							li.tovar-characteristics__item
+								span.characteristics__type Цвет
+								span.characteristics__desc=item.color
+							li.tovar-characteristics__item
+								span.characteristics__type ОС
+								span.characteristics__desc=item.os
+							li.tovar-characteristics__item
+								span.characteristics__type Свзяь 3G
+								span.characteristics__desc=item.g3
+							li.tovar-characteristics__item
+								span.characteristics__type 4G(LTE)
+								span.characteristics__desc=item.g4
+							li.tovar-characteristics__item
+								span.characteristics__type GPS-модуль
+								span.characteristics__desc=item.gps
+					div.tovar-descr__rating
+						span.tovar-descr__rating-item(data-rating=item.reiting)
+							span.fill-rating
+						span.rating__number=item.reiting
+				div.tovar-money
+					div.tovar-money__price
+						span.tovar-money__price__number=item.price
+						i.fa.fa-rub
+					div.tovar-money__addtocart
+						button.tovar-money__addtocart__btn(type="submit") В корзину
+					div.tovar-money__outofstock
+						i.fa.fa-circle.tovar-money__outofstock__point
+						span.tovar-money__outofstock__status В наличии

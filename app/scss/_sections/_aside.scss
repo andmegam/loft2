@@ -153,14 +153,17 @@
 			.color__list {
 				margin-top: 12px;
 				margin-bottom: -10px;
+				width: 250px;
 			}
 			.color__item {
+
 				display: inline-block;
+				content: "";
 				border: solid 1px #dee1e4;
 				margin: 0 17px 15px 0;
 				@include border-radius(2px);
 				cursor: pointer;
-
+				@extend %colorblock;
 
 				&:hover {
 					border: solid 1.5px #F60;
@@ -170,58 +173,46 @@
 					border: solid 2.5px #F60;
 				}
 
-				.color__white {
+				&.color__white {
 					background-color: #FFF;
-					@extend %colorblock;
 				}
-				.color__very-light-grey {
+				&.color__very-light-grey {
 					background-color: #cccccc;
-					@extend %colorblock;
 				}
-				.color__black {
+				&.color__black {
 					background-color: #000000;
-					@extend %colorblock;
 				}
-				.color__prussian-blue {
+				&.color__prussian-blue {
 					background-color: #0a3153;
-					@extend %colorblock;
 				}
 
-				.color__red {
+				&.color__red {
 					background-color: #ff1800;
-					@extend %colorblock;
 				}
 
-				.color__yellow {
+				&.color__yellow {
 					background-color: #fff343;
-					@extend %colorblock;
 				}
 
-				.color__sunshade {
+				&.color__sunshade {
 					background-color: #FB914A;
-					@extend %colorblock;
 				}
-				.color__gossip {
+				&.color__gossip {
 					background-color: #92C37C;
-					@extend %colorblock;
 				}
-				.color__summer-sky {
+				&.color__summer-sky {
 					background-color: #40A6FF;
-					@extend %colorblock;
 				}
-				.color__ce-soir {
+				&.color__ce-soir {
 					background-color: #9870AD;
-					@extend %colorblock;
 				}
 
-				.color__pale-violet-red {
+				&.color__pale-violet-red {
 					background-color: #DC78AD;
-					@extend %colorblock;
 				}
 
-				.color__russet {
+				&.color__russet {
 					background-color: #7F401D;
-					@extend %colorblock;
 				}
 			}
 

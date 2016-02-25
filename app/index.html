@@ -1,373 +1,50 @@
 <!DOCTYPE html>
-<html lang="ru"></html>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=1230, initial-scale=1">
-<title>Каталог мобильныех телефонов</title>
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/jquery-ui.css">
-<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-<body class="body">
-	<div class="wrapper">
-		<header class="header">
-			<section class="header-contacts">
-				<div class="header-contacts_container">
-					<ul class="contacts-socials__list">
-						<li class="socials__item"> <a href="#" target="_blank" class="socials__link fbtop">fb</a></li>
-						<li class="socials__item"><a href="#" target="_blank" class="socials__link vktop">vk</a></li>
-						<li class="socials__item"><a href="#" target="_blank" class="socials__link twtop">tw</a></li>
-					</ul>
-					<div class="contacts-phone"><i class="contacts-phone__icon icon">contacts-phone</i><span class="contacts-phone__text">+7 (921) 123-12-13</span></div>
-					<div class="contacts-address"><i class="contacts-address__icon icon">contacts-address</i><span class="contacts-address__text">ул. Маяковская 6, офис 17</span></div>
-				</div>
-			</section>
-			<section class="header-middle">
-				<div class="header-middle__logo cell"><img src="img/logo_header.png" alt="Лого" class="logo-img">
-					<h1 class="logo-text">Каталог мобильных телевонов</h1>
-				</div>
-				<div class="header-middle__search cell">
-					<div class="search-tovear">
-						<form method="post" action="#" class="search-tovar__form form">
-							<input name="search-tovear__text" placeholder="Что будем искать" class="search-tovar__text">
-							<button type="submit" value="submit" class="search-tovar__btn">Найти</button>
-						</form>
+<html lang="ru">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1230, initial-scale=1">
+	<title>Каталог мобильныех телефонов</title>
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<body class="body">
+		<div class="wrapper">
+			<header class="header">
+				<section class="header-contacts">
+					<div class="header-contacts_container">
+						<ul class="contacts-socials__list">
+							<li class="socials__item"> <a href="#" target="_blank" class="socials__link fbtop">fb</a></li>
+							<li class="socials__item"><a href="#" target="_blank" class="socials__link vktop">vk</a></li>
+							<li class="socials__item"><a href="#" target="_blank" class="socials__link twtop">tw</a></li>
+						</ul>
+						<div class="contacts-phone"><i class="contacts-phone__icon icon">contacts-phone</i><span class="contacts-phone__text">+7 (921) 123-12-13</span></div>
+						<div class="contacts-address"><i class="contacts-address__icon icon">contacts-address</i><span class="contacts-address__text">ул. Маяковская 6, офис 17</span></div>
 					</div>
-				</div>
-				<div class="header-middle__mininav cell">
-					<ul class="mininav__list">
-						<li class="mininav__item"><a href="#" class="mininav__link">Карта проезда</a></li>
-						<li class="mininav__item"><a href="#" class="mininav__link">История заказов</a></li>
-						<li class="mininav__item"><a href="#" class="mininav__link">Корзина</a></li>
-					</ul>
-				</div>
-			</section>
-			<section class="header-nav">
-				<nav class="nav">
-					<ul class="nav__list">
-						<li class="nav__item"><a href="#" class="nav__link">Планшеты</a></li>
-						<li class="nav__item activ"><a href="#" class="nav__link">Мобильные телефоны</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Mp3 плееры</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Персональные компьютеры</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Ноутбуки</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Аксессуары</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Бытовая техника</a></li>
-					</ul>
-				</nav>
-			</section>
-		</header>
-		<section class="breadcrumbs">
-			<ul class="breadcrumbs__list">
-				<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
-				<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Каталог</a></li>
-			</ul>
-			<ul class="breadcrumbs__current">Мобильные телефоны</ul>
-		</section>
-		<div class="general">
-			<aside class="aside">
-				<ul class="mobile-type__list">
-					<li class="mobile-type__item"><a href="#" class="mobile-type__link">Флагманы</a></li>
-					<li class="mobile-type__item"><a href="#" class="mobile-type__link">Бюджетная линейка</a></li>
-				</ul>
-				<ul class="filters__list">
-					<li class="filters__item"><a href="#" class="filters__link">Наличие в магазинах<i class="arrow icon">arrow</i></a>
-						<div class="filter__inner">
-							<ul class="instore__list radiogroup">
-								<li class="instore__item">
-									<input type="radio" checked name="filter" id="all_stores" class="radio">
-									<label for="all_stores" class="label">Во всех магазинах</label>
-								</li>
-								<li class="instore__item">
-									<input type="radio" name="filter" id="nearest_store" class="radio">
-									<label for="nearest_store" class="label">В ближайшем ко мне магазине</label>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li class="filters__item"><a href="#" class="filters__link">Бренды<i class="arrow icon">arrow</i></a>
-						<div class="filter__inner">
-							<ul class="brand__list checkboxgroup">
-								<li class="brand__item">
-									<input type="checkbox" name="lenovo" id="lenovo" class="checkbox">
-									<label for="lenovo" class="label">Lenovo</label>
-								</li>
-								<li class="brand__item">
-									<input type="checkbox" name="apple" id="apple" class="checkbox">
-									<label for="apple" class="label">Apple</label>
-								</li>
-								<li class="brand__item">
-									<input type="checkbox" name="samsung" id="samsung" class="checkbox">
-									<label for="samsung" class="label">Samsung</label>
-								</li>
-								<li class="brand__item">
-									<input type="checkbox" name="asus" id="asus" class="checkbox">
-									<label for="asus" class="label">Asus</label>
-								</li>
-								<li class="brand__item">
-									<input type="checkbox" name="motorola" id="motorola" class="checkbox">
-									<label for="motorola" class="label">Motorola</label>
-								</li>
-							</ul><a href="#" class="filters__clear">Сбросить фильтр</a>
-						</div>
-					</li>
-					<li class="filters__item"><a href="#" class="filters__link">Цена<i class="arrow icon">arrow</i></a>
-						<div class="filter__inner">
-							<div class="money-range">
-								<div class="money-range__money_begin">
-									<label for="money-begin" class="money-range__label">от</label>
-									<input type="text" id="money-begin" class="money-range__money">
-								</div>
-								<div class="money-range__money_end">
-									<label for="money-end" class="money-range__label">до</label>
-									<input type="text" id="money-end" class="money-range__money">
-								</div>
-							</div>
-							<div id="slider-range" class="money-range__slider"></div>
-						</div>
-					</li>
-					<li class="filters__item"><a href="#" class="filters__link">Цвет<i class="arrow icon">arrow</i></a>
-						<div class="filter__inner">
-							<ul class="color__list">
-								<li class="color__item"><span class="color__white"></span></li>
-								<li class="color__item activ"><span class="color__very-light-grey"></span></li>
-								<li class="color__item"><span class="color__black"></span></li>
-								<li class="color__item"><span class="color__prussian-blue"></span></li>
-								<li class="color__item"><span class="color__red"></span></li>
-								<li class="color__item"><span class="color__yellow"></span></li>
-								<li class="color__item"><span class="color__sunshade"></span></li>
-								<li class="color__item"><span class="color__gossip"></span></li>
-								<li class="color__item"><span class="color__summer-sky"></span></li>
-								<li class="color__item"><span class="color__ce-soir"></span></li>
-								<li class="color__item"><span class="color__pale-violet-red"></span></li>
-								<li class="color__item"><span class="color__russet"></span></li>
-							</ul>
-						</div>
-					</li>
-					<li class="filters__item"><a href="#" class="filters__link">Операционные системы<i class="arrow icon">arrow</i></a>
-						<div class="filter__inner">
-							<ul class="os__list checkboxgroup">
-								<li class="os__item">
-									<input type="checkbox" name="android" id="android" class="checkbox">
-									<label for="android" class="label">Android</label>
-								</li>
-								<li class="os__item">
-									<input type="checkbox" name="ios" id="ios" class="checkbox">
-									<label for="ios" class="label">iOS</label>
-								</li>
-								<li class="os__item">
-									<input type="checkbox" name="windowsmobile" id="windowsmobile" class="checkbox">
-									<label for="windowsmobile" class="label">Windows Mobile</label>
-								</li>
-								<li class="os__item">
-									<input type="checkbox" name="symbian" id="symbian" class="checkbox">
-									<label for="symbian" class="label">Symbian</label>
-								</li>
-								<li class="os__item">
-									<input type="checkbox" name="custom" id="custom" class="checkbox">
-									<label for="custom" class="label">Custom</label>
-								</li>
-							</ul><a href="#" class="filters__clear">Сбросить фильтр</a>
-						</div>
-					</li>
-				</ul>
-			</aside>
-			<main class="main">
-				<section class="view">
-					<div class="sorting">Сортировать по
-						<select class="sorting-list">
-							<option value="sort-mony" class="sorting-item">по цене</option>
-							<option value="sort-rating" class="sorting-item">по популярности</option>
-						</select>
-					</div>
-					<div class="viewcatalog">Вид каталога</div>
-					<ul class="viewcatalog__list">
-						<li class="viewcatalog__item"><a href="#" title="Содержимое" class="viewcatalog__link viewcontent">viewcontent</a></li>
-						<li class="viewcatalog__item"><a href="#" title="Таблица" class="viewcatalog__link viewtable">viewtable</a></li>
-						<li class="viewcatalog__item activ"><a href="#" title="Список" class="viewcatalog__link viewlist">viewlist</a></li>
-					</ul>
 				</section>
-				<section class="products viewlist">
-					<div class="products">
-						<ul class="products__list">
-							<li class="products__item">
-								<div class="tovar">
-									<div class="tovar-foto">
-										<div class="tovar-foto__large"><img src="../img/tovar-0.png" alt="Samsung GT-I9301I GALAXY S 3 " class="tovar-foto__large-img"/></div>
-										<ul class="tovar-foto-small__list">
-											<li class="tovar-foto-small__item"><img src="../img/tovar-1.png" alt="Samsung GT-I9301I GALAXY S 3 " class="tovar-foto-small__item-img"/></li>
-											<li class="tovar-foto-small__item"><img src="../img/tovar-2.png" alt="Samsung GT-I9301I GALAXY S 3 " class="tovar-foto-small__item-img"/></li>
-											<li class="tovar-foto-small__item"><img src="../img/tovar-3.png" alt="Samsung GT-I9301I GALAXY S 3 " class="tovar-foto-small__item-img"/></li>
-										</ul>
-										<div class="tovar-art"><span class="tovar-art__type">Артикул</span><span class="tovar-art__number">189238</span></div>
-									</div>
-									<div class="tovar-descr">
-										<div class="tovar-descr__name">Samsung GT-I9301I GALAXY S 3 </div>
-										<div class="tovar-descr__desc">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц... </div>
-										<div class="tovar-descr__rating">
-											<ul class="rating__list">
-												<li class="rating__item starred"><span class="rating__star">rating1</span></li>
-												<li class="rating__item starred"><span class="rating__star">rating2</span></li>
-												<li class="rating__item starred"><span class="rating__star">rating3</span></li>
-												<li class="rating__item starred"><span class="rating__star">rating4</span></li>
-												<li class="rating__item starwhite"><span class="rating__star">rating5</span></li>
-											</ul><span class="rating__number">4</span>
-										</div>
-									</div>
-									<div class="tovar-money">
-										<div class="tovar-money__price"><span class="tovar-money__price__number">11 290</span><i class="fa fa-rub"></i></div>
-										<div class="tovar-money__addtocart">
-											<button type="submit" class="tovar-money__addtocart__btn">В корзину</button>
-										</div>
-										<div class="tovar-money__outofstock"><i class="fa fa-circle tovar-money__outofstock__point"></i><span class="tovar-money__outofstock__status">В наличии</span></div>
-									</div>
-								</div>
-							</li>
-						</ul>
+				<section class="header-middle">
+					<div class="header-middle__logo cell"><img src="img/logo_header.png" alt="Лого" class="logo-img">
+						<h1 class="logo-text">Каталог мобильных телевонов</h1>
 					</div>
-					<div class="products">
-						<ul class="products__list">
-							<li class="products__item">
-								<div class="tovar">
-									<div class="tovar-foto">
-										<div class="tovar-foto__large"><img src="../img/tovar-0.png" alt="Samsung GT-I9301I GALAXY S 3 " class="tovar-foto__large-img"/></div>
-										<ul class="tovar-foto-small__list">
-											<li class="tovar-foto-small__item"><img src="../img/tovar-1.png" alt="Samsung GT-I9301I GALAXY S 3 " class="tovar-foto-small__item-img"/></li>
-											<li class="tovar-foto-small__item"><img src="../img/tovar-2.png" alt="Samsung GT-I9301I GALAXY S 3 " class="tovar-foto-small__item-img"/></li>
-											<li class="tovar-foto-small__item"><img src="../img/tovar-3.png" alt="Samsung GT-I9301I GALAXY S 3 " class="tovar-foto-small__item-img"/></li>
-										</ul>
-										<div class="tovar-art"><span class="tovar-art__type">Артикул</span><span class="tovar-art__number">189238</span></div>
-									</div>
-									<div class="tovar-descr">
-										<div class="tovar-descr__name">Samsung GT-I9301I GALAXY S 3 </div>
-										<div class="tovar-descr__desc">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц... </div>
-										<div class="tovar-descr__rating">
-											<ul class="rating__list">
-												<li class="rating__item starred"><span class="rating__star">rating1</span></li>
-												<li class="rating__item starred"><span class="rating__star">rating2</span></li>
-												<li class="rating__item starred"><span class="rating__star">rating3</span></li>
-												<li class="rating__item starred"><span class="rating__star">rating4</span></li>
-												<li class="rating__item starwhite"><span class="rating__star">rating5</span></li>
-											</ul><span class="rating__number">4</span>
-										</div>
-									</div>
-									<div class="tovar-money">
-										<div class="tovar-money__price"><span class="tovar-money__price__number">11 290</span><i class="fa fa-rub"></i></div>
-										<div class="tovar-money__addtocart">
-											<button type="submit" class="tovar-money__addtocart__btn">В корзину</button>
-										</div>
-										<div class="tovar-money__outofstock"><i class="fa fa-circle tovar-money__outofstock__point"></i><span class="tovar-money__outofstock__status">В наличии</span></div>
-									</div>
-								</div>
-							</li>
-						</ul>
+					<div class="header-middle__search cell">
+						<div class="search-tovear">
+							<form method="post" action="#" class="search-tovar__form form">
+								<input name="search-tovear__text" placeholder="Что будем искать" class="search-tovar__text">
+								<button type="submit" value="submit" class="search-tovar__btn">Найти</button>
+							</form>
+						</div>
 					</div>
-					<div class="products">
-						<ul class="products__list">
-							<li class="products__item">
-								<div class="tovar">
-									<div class="tovar-foto">
-										<div class="tovar-foto__large"><img src="../img/tovar-0.png" alt="Samsung GT-I9301I GALAXY S 3 " class="tovar-foto__large-img"/></div>
-										<ul class="tovar-foto-small__list">
-											<li class="tovar-foto-small__item"><img src="../img/tovar-1.png" alt="Samsung GT-I9301I GALAXY S 3 " class="tovar-foto-small__item-img"/></li>
-											<li class="tovar-foto-small__item"><img src="../img/tovar-2.png" alt="Samsung GT-I9301I GALAXY S 3 " class="tovar-foto-small__item-img"/></li>
-											<li class="tovar-foto-small__item"><img src="../img/tovar-3.png" alt="Samsung GT-I9301I GALAXY S 3 " class="tovar-foto-small__item-img"/></li>
-										</ul>
-										<div class="tovar-art"><span class="tovar-art__type">Артикул</span><span class="tovar-art__number">189238</span></div>
-									</div>
-									<div class="tovar-descr">
-										<div class="tovar-descr__name">Samsung GT-I9301I GALAXY S 3 </div>
-										<div class="tovar-descr__desc">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц... </div>
-										<div class="tovar-descr__rating">
-											<ul class="rating__list">
-												<li class="rating__item starred"><span class="rating__star">rating1</span></li>
-												<li class="rating__item starred"><span class="rating__star">rating2</span></li>
-												<li class="rating__item starred"><span class="rating__star">rating3</span></li>
-												<li class="rating__item starred"><span class="rating__star">rating4</span></li>
-												<li class="rating__item starwhite"><span class="rating__star">rating5</span></li>
-											</ul><span class="rating__number">4</span>
-										</div>
-									</div>
-									<div class="tovar-money">
-										<div class="tovar-money__price"><span class="tovar-money__price__number">11 290</span><i class="fa fa-rub"></i></div>
-										<div class="tovar-money__addtocart">
-											<button type="submit" class="tovar-money__addtocart__btn">В корзину</button>
-										</div>
-										<div class="tovar-money__outofstock"><i class="fa fa-circle tovar-money__outofstock__point"></i><span class="tovar-money__outofstock__status">В наличии</span></div>
-									</div>
-								</div>
-							</li>
+					<div class="header-middle__mininav cell">
+						<ul class="mininav__list">
+							<li class="mininav__item"><a href="#" class="mininav__link">Карта проезда</a></li>
+							<li class="mininav__item"><a href="#" class="mininav__link">История заказов</a></li>
+							<li class="mininav__item"><a href="#" class="mininav__link">Корзина</a></li>
 						</ul>
 					</div>
 				</section>
-			</main>
-			<div class="content_bottom">
-				<div class="content_bottom_title">Важная информация</div>
-				<div class="content_bottom_text">
-					<p class="par">
-
-						Повседневная практика показывает, что сложившаяся структура организации влечет за собой
-						процесс внедрения и модернизации позиций, занимаемых участниками в отношении
-						поставленных задач. Значимость этих проблем настолько очевидна, что реализация
-						намеченных плановых заданий в значительной степени обуславливает создание модели
-						развития. Таким образом консультация с широким активом представляет собой интересный
-						эксперимент проверки модели развития.
-					</p>
-					<p class="par">
-						Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет
-						оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким
-						бразом сложившаяся структура организации требуют определения и уточнения направлений
-						прогрессивного развития. Равным образом консультация с широким активом влечет за собой
-						процесс внедрения и модернизации соответствующий условий активизации
-					</p>
-					<p class="par">
-
-						Идейные соображения высшего порядка, а также начало повседневной работы по ормированию
-						позиции позволяет оценить значение соответствующий условий активизации. С другой
-						стороны сложившаяся структура организации позволяет оценить значение системы обучения
-						кадров, соответствует насущным потребностям.
-					</p>
-					<p class="par">
-
-						Повседневная практика показывает, что сложившаяся структура организации влечет за собой
-						процесс внедрения и модернизации позиций, занимаемых участниками в отношении
-						поставленных задач. Значимость этих проблем настолько очевидна, что реализация
-						намеченных плановых заданий в значительной степени обуславливает создание модели
-						развития. Таким образом консультация с широким активом представляет собой интересный
-						эксперимент проверки модели развития.
-					</p>
-					<p class="par">
-						Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет
-						оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким
-						бразом сложившаяся структура организации требуют определения и уточнения направлений
-						прогрессивного развития. Равным образом консультация с широким активом влечет за собой
-						процесс внедрения и модернизации соответствующий условий активизации
-					</p>
-					<p class="par">
-
-						Идейные соображения высшего порядка, а также начало повседневной работы по ормированию
-						позиции позволяет оценить значение соответствующий условий активизации. С другой
-						стороны сложившаяся структура организации позволяет оценить значение системы обучения
-						кадров, соответствует насущным потребностям.
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="empty"></div>
-	</div>
-	<footer class="footer">
-		<div class="footer-content">
-			<div class="footer-top">
-				<div class="footer-logo"><img src="img/logo_footer.png" alt="Лого" class="footer-logo__img"></div>
-				<div class="footer-links">
-					<div class="footer-socials">
-						<ul class="socials__list">
-							<li class="socials__item"><a href="#" target="_blank" class="socials__link fbbottom">fb</a></li>
-							<li class="socials__item"><a href="#" target="_blank" class="socials__link vkbottom">vk</a></li>
-							<li class="socials__item"><a href="#" target="_blank" class="socials__link twbottom">tw</a></li>
-						</ul>
-					</div>
-					<div class="footer-nav">
+				<section class="header-nav">
+					<nav class="nav">
 						<ul class="nav__list">
 							<li class="nav__item"><a href="#" class="nav__link">Планшеты</a></li>
 							<li class="nav__item activ"><a href="#" class="nav__link">Мобильные телефоны</a></li>
@@ -377,15 +54,455 @@
 							<li class="nav__item"><a href="#" class="nav__link">Аксессуары</a></li>
 							<li class="nav__item"><a href="#" class="nav__link">Бытовая техника</a></li>
 						</ul>
+					</nav>
+				</section>
+			</header>
+			<div class="breadcrumbs">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+					<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Каталог</a></li>
+				</ul>
+				<div class="breadcrumbs__current">
+					<h2 class="title-section">Мобильные телефоны</h2>
+				</div>
+			</div>
+			<div class="general">
+				<aside class="aside">
+					<ul class="mobile-type__list">
+						<li class="mobile-type__item"><a href="#" class="mobile-type__link">Флагманы</a></li>
+						<li class="mobile-type__item"><a href="#" class="mobile-type__link">Бюджетная линейка</a></li>
+					</ul>
+					<ul class="filters__list">
+						<li class="filters__item"><a href="#" class="filters__link">Наличие в магазинах<i class="arrow icon">arrow</i></a>
+							<div class="filter__inner">
+								<ul class="instore__list radiogroup">
+									<li class="instore__item">
+										<input type="radio" checked name="filter" id="all_stores" class="radio">
+										<label for="all_stores" class="label">Во всех магазинах</label>
+									</li>
+									<li class="instore__item">
+										<input type="radio" name="filter" id="nearest_store" class="radio">
+										<label for="nearest_store" class="label">В ближайшем ко мне магазине</label>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="filters__item"><a href="#" class="filters__link">Бренды<i class="arrow icon">arrow</i></a>
+							<div class="filter__inner">
+								<ul class="brand__list checkboxgroup">
+									<li class="brand__item">
+										<input type="checkbox" name="lenovo" id="lenovo" class="checkbox">
+										<label for="lenovo" class="label">Lenovo</label>
+									</li>
+									<li class="brand__item">
+										<input type="checkbox" name="apple" id="apple" class="checkbox">
+										<label for="apple" class="label">Apple</label>
+									</li>
+									<li class="brand__item">
+										<input type="checkbox" name="samsung" id="samsung" class="checkbox">
+										<label for="samsung" class="label">Samsung</label>
+									</li>
+									<li class="brand__item">
+										<input type="checkbox" name="asus" id="asus" class="checkbox">
+										<label for="asus" class="label">Asus</label>
+									</li>
+									<li class="brand__item">
+										<input type="checkbox" name="motorola" id="motorola" class="checkbox">
+										<label for="motorola" class="label">Motorola</label>
+									</li>
+								</ul><a href="#" class="filters__clear">Сбросить фильтр</a>
+							</div>
+						</li>
+						<li class="filters__item"><a href="#" class="filters__link">Цена<i class="arrow icon">arrow</i></a>
+							<div class="filter__inner">
+								<div class="money-range">
+									<div class="money-range__money_begin">
+										<label for="money-begin" class="money-range__label">от</label>
+										<input type="text" id="money-begin" class="money-range__money">
+									</div>
+									<div class="money-range__money_end">
+										<label for="money-end" class="money-range__label">до</label>
+										<input type="text" id="money-end" class="money-range__money">
+									</div>
+								</div>
+								<div id="slider-range" class="money-range__slider"></div>
+							</div>
+						</li>
+						<li class="filters__item"><a href="#" class="filters__link">Цвет<i class="arrow icon">arrow</i></a>
+							<div class="filter__inner">
+								<ul class="color__list">
+									<li class="color__item"><span class="color__white"></span></li>
+									<li class="color__item color__very-light-grey activ"></li>
+									<li class="color__item color__black"></li>
+									<li class="color__item color__prussian-blue"></li>
+									<li class="color__item color__red"></li>
+									<li class="color__item color__yellow"></li>
+									<li class="color__item color__sunshade"></li>
+									<li class="color__item color__gossip"></li>
+									<li class="color__item color__summer-sky"></li>
+									<li class="color__item color__ce-soir"></li>
+									<li class="color__item color__pale-violet-red"></li>
+									<li class="color__item color__russet"></li>
+								</ul>
+							</div>
+						</li>
+						<li class="filters__item"><a href="#" class="filters__link">Операционные системы<i class="arrow icon">arrow</i></a>
+							<div class="filter__inner">
+								<ul class="os__list checkboxgroup">
+									<li class="os__item">
+										<input type="checkbox" name="android" id="android" class="checkbox">
+										<label for="android" class="label">Android</label>
+									</li>
+									<li class="os__item">
+										<input type="checkbox" name="ios" id="ios" class="checkbox">
+										<label for="ios" class="label">iOS</label>
+									</li>
+									<li class="os__item">
+										<input type="checkbox" name="windowsmobile" id="windowsmobile" class="checkbox">
+										<label for="windowsmobile" class="label">Windows Mobile</label>
+									</li>
+									<li class="os__item">
+										<input type="checkbox" name="symbian" id="symbian" class="checkbox">
+										<label for="symbian" class="label">Symbian</label>
+									</li>
+									<li class="os__item">
+										<input type="checkbox" name="custom" id="custom" class="checkbox">
+										<label for="custom" class="label">Custom</label>
+									</li>
+								</ul><a href="#" class="filters__clear">Сбросить фильтр</a>
+							</div>
+						</li>
+					</ul>
+				</aside>
+				<main class="main">
+					<section class="view">
+						<div class="sorting">Сортировать по
+							<select class="sorting-list">
+								<option value="sort-mony" class="sorting-item">по цене</option>
+								<option value="sort-rating" class="sorting-item">по популярности</option>
+							</select>
+						</div>
+						<div class="viewcatalog">Вид каталога</div>
+						<ul class="viewcatalog__list">
+							<li class="viewcatalog__item activ"><a href="#" id="viewtable" title="Таблица" class="viewcatalog__link viewtable">viewtable</a></li>
+							<li class="viewcatalog__item"><a href="#" id="viewcontent" title="Содержимое" class="viewcatalog__link viewcontent">viewcontent</a></li>
+							<li class="viewcatalog__item"><a href="#" id="viewlist" title="Список" class="viewcatalog__link viewlist">viewlist</a></li>
+						</ul>
+					</section>
+					<section class="products viewtable">
+						<ul class="products__list">
+							<li class="products__item">
+								<div class="tovar">
+									<div class="tovar-foto">
+										<div class="tovar-foto__large"><img src="../loft2/img/products/samsung-1.png" alt="Samsung GT-I9301I GALAXY S 3" class="tovar-foto__large-img"/></div>
+										<ul class="tovar-foto-small__list">
+											<li class="tovar-foto-small__item activ"><img src="../loft2/img/products/samsung-1.png" alt="Samsung GT-I9301I GALAXY S 3" class="tovar-foto-small__item-img"/></li>
+											<li class="tovar-foto-small__item"><img src="../loft2/img/products/samsung-2.png" alt="Samsung GT-I9301I GALAXY S 3" class="tovar-foto-small__item-img"/></li>
+											<li class="tovar-foto-small__item"><img src="../loft2/img/products/samsung-3.png" alt="Samsung GT-I9301I GALAXY S 3" class="tovar-foto-small__item-img"/></li>
+										</ul>
+										<div class="tovar-art"><span class="tovar-art__type">Артикул</span><span class="tovar-art__number">189238</span></div>
+									</div>
+									<div class="tovar-descr">
+										<div class="tovar-descr__name">Samsung GT-I9301I GALAXY S 3</div>
+										<div class="tovar-descr__desc">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц... </div>
+										<div class="tovar-characteristics">
+											<ul class="tovar-characteristics__list">
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Тип SIM-карты</span><span class="characteristics__desc">Micro-SIM</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Количество SIM-карт</span><span class="characteristics__desc">1</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Цвет</span><span class="characteristics__desc">Белый</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">ОС</span><span class="characteristics__desc">Android</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Свзяь 3G</span><span class="characteristics__desc">Есть</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">4G(LTE)</span><span class="characteristics__desc">Нет</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">GPS-модуль</span><span class="characteristics__desc">Есть</span></li>
+											</ul>
+										</div>
+										<div class="tovar-descr__rating"><span data-rating="3.5" class="tovar-descr__rating-item"><span class="fill-rating"></span></span><span class="rating__number">3.5</span></div>
+									</div>
+									<div class="tovar-money">
+										<div class="tovar-money__price"><span class="tovar-money__price__number">11 290</span><i class="fa fa-rub"></i></div>
+										<div class="tovar-money__addtocart">
+											<button type="submit" class="tovar-money__addtocart__btn">В корзину</button>
+										</div>
+										<div class="tovar-money__outofstock"><i class="fa fa-circle tovar-money__outofstock__point"></i><span class="tovar-money__outofstock__status">В наличии</span></div>
+									</div>
+								</div>
+							</li>
+							<li class="products__item">
+								<div class="tovar">
+									<div class="tovar-foto">
+										<div class="tovar-foto__large"><img src="../loft2/img/products/lumia640-1.png" alt="Microsoft Lumia 640 RM-1077" class="tovar-foto__large-img"/></div>
+										<ul class="tovar-foto-small__list">
+											<li class="tovar-foto-small__item activ"><img src="../loft2/img/products/lumia640-1.png" alt="Microsoft Lumia 640 RM-1077" class="tovar-foto-small__item-img"/></li>
+											<li class="tovar-foto-small__item"><img src="../loft2/img/products/lumia640-2.png" alt="Microsoft Lumia 640 RM-1077" class="tovar-foto-small__item-img"/></li>
+											<li class="tovar-foto-small__item"><img src="../loft2/img/products/lumia640-3.png" alt="Microsoft Lumia 640 RM-1077" class="tovar-foto-small__item-img"/></li>
+										</ul>
+										<div class="tovar-art"><span class="tovar-art__type">Артикул</span><span class="tovar-art__number">321559</span></div>
+									</div>
+									<div class="tovar-descr">
+										<div class="tovar-descr__name">Microsoft Lumia 640 RM-1077</div>
+										<div class="tovar-descr__desc">Смартфон Microsoft Lumia 640 Dual SIM (RM-1077) С ним вы открываете мир ярких цифровых возможностей. Этот многофункциональный смартфон уже содержит набор бесплатных сервисов Microsoft...</div>
+										<div class="tovar-characteristics">
+											<ul class="tovar-characteristics__list">
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Тип SIM-карты</span><span class="characteristics__desc">Micro-SIM</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Количество SIM-карт</span><span class="characteristics__desc">2</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Цвет</span><span class="characteristics__desc">Черный</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">ОС</span><span class="characteristics__desc">Windows Phone</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Свзяь 3G</span><span class="characteristics__desc">Есть</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">4G(LTE)</span><span class="characteristics__desc">Нет</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">GPS-модуль</span><span class="characteristics__desc">A-GPS</span></li>
+											</ul>
+										</div>
+										<div class="tovar-descr__rating"><span data-rating="2.5" class="tovar-descr__rating-item"><span class="fill-rating"></span></span><span class="rating__number">2.5</span></div>
+									</div>
+									<div class="tovar-money">
+										<div class="tovar-money__price"><span class="tovar-money__price__number">10 990</span><i class="fa fa-rub"></i></div>
+										<div class="tovar-money__addtocart">
+											<button type="submit" class="tovar-money__addtocart__btn">В корзину</button>
+										</div>
+										<div class="tovar-money__outofstock"><i class="fa fa-circle tovar-money__outofstock__point"></i><span class="tovar-money__outofstock__status">В наличии</span></div>
+									</div>
+								</div>
+							</li>
+							<li class="products__item">
+								<div class="tovar">
+									<div class="tovar-foto">
+										<div class="tovar-foto__large"><img src="../loft2/img/products/archos-1.png" alt="Archos 50 Oxygen Plus" class="tovar-foto__large-img"/></div>
+										<ul class="tovar-foto-small__list">
+											<li class="tovar-foto-small__item activ"><img src="../loft2/img/products/archos-1.png" alt="Archos 50 Oxygen Plus" class="tovar-foto-small__item-img"/></li>
+											<li class="tovar-foto-small__item"><img src="../loft2/img/products/archos-2.png" alt="Archos 50 Oxygen Plus" class="tovar-foto-small__item-img"/></li>
+											<li class="tovar-foto-small__item"><img src="../loft2/img/products/archos-3.png" alt="Archos 50 Oxygen Plus" class="tovar-foto-small__item-img"/></li>
+										</ul>
+										<div class="tovar-art"><span class="tovar-art__type">Артикул</span><span class="tovar-art__number">132489</span></div>
+									</div>
+									<div class="tovar-descr">
+										<div class="tovar-descr__name">Archos 50 Oxygen Plus</div>
+										<div class="tovar-descr__desc">Смартфон Archos 50 Oxygen Plus, серый. Моноблок, Micro-SIM, Android , 3G, Bluetooth, USB-подключение к ПК, Wi-Fi, Разрешение основной камеры 8 Мп...</div>
+										<div class="tovar-characteristics">
+											<ul class="tovar-characteristics__list">
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Тип SIM-карты</span><span class="characteristics__desc">Micro-SIM</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Количество SIM-карт</span><span class="characteristics__desc">2</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Цвет</span><span class="characteristics__desc">Серый</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">ОС</span><span class="characteristics__desc">Android</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Свзяь 3G</span><span class="characteristics__desc">Есть</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">4G(LTE)</span><span class="characteristics__desc">Нет</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">GPS-модуль</span><span class="characteristics__desc">Есть</span></li>
+											</ul>
+										</div>
+										<div class="tovar-descr__rating"><span data-rating="4" class="tovar-descr__rating-item"><span class="fill-rating"></span></span><span class="rating__number">4</span></div>
+									</div>
+									<div class="tovar-money">
+										<div class="tovar-money__price"><span class="tovar-money__price__number">9 900</span><i class="fa fa-rub"></i></div>
+										<div class="tovar-money__addtocart">
+											<button type="submit" class="tovar-money__addtocart__btn">В корзину</button>
+										</div>
+										<div class="tovar-money__outofstock"><i class="fa fa-circle tovar-money__outofstock__point"></i><span class="tovar-money__outofstock__status">В наличии</span></div>
+									</div>
+								</div>
+							</li>
+							<li class="products__item">
+								<div class="tovar">
+									<div class="tovar-foto">
+										<div class="tovar-foto__large"><img src="../loft2/img/products/alcatel-1.png" alt="Alcatel OT4013D PIXI 3 (2 SIM)" class="tovar-foto__large-img"/></div>
+										<ul class="tovar-foto-small__list">
+											<li class="tovar-foto-small__item activ"><img src="../loft2/img/products/alcatel-1.png" alt="Alcatel OT4013D PIXI 3 (2 SIM)" class="tovar-foto-small__item-img"/></li>
+											<li class="tovar-foto-small__item"><img src="../loft2/img/products/alcatel-2.png" alt="Alcatel OT4013D PIXI 3 (2 SIM)" class="tovar-foto-small__item-img"/></li>
+											<li class="tovar-foto-small__item"><img src="../loft2/img/products/alcatel-3.png" alt="Alcatel OT4013D PIXI 3 (2 SIM)" class="tovar-foto-small__item-img"/></li>
+										</ul>
+										<div class="tovar-art"><span class="tovar-art__type">Артикул</span><span class="tovar-art__number">321489</span></div>
+									</div>
+									<div class="tovar-descr">
+										<div class="tovar-descr__name">Alcatel OT4013D PIXI 3 (2 SIM)</div>
+										<div class="tovar-descr__desc">Смартфон Смартфон Alcatel OT4013D PIXI 3 (2 SIM). Смартфон Alcatel One Touch 4013D оснащен четырехдюймовым дисплеем и двумя слотами для SIM-карт...</div>
+										<div class="tovar-characteristics">
+											<ul class="tovar-characteristics__list">
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Тип SIM-карты</span><span class="characteristics__desc">Micro-SIM</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Количество SIM-карт</span><span class="characteristics__desc">2</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Цвет</span><span class="characteristics__desc">Серый</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">ОС</span><span class="characteristics__desc">Android</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Свзяь 3G</span><span class="characteristics__desc">Есть</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">4G(LTE)</span><span class="characteristics__desc">Нет</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">GPS-модуль</span><span class="characteristics__desc">A-GPS</span></li>
+											</ul>
+										</div>
+										<div class="tovar-descr__rating"><span data-rating="5" class="tovar-descr__rating-item"><span class="fill-rating"></span></span><span class="rating__number">5</span></div>
+									</div>
+									<div class="tovar-money">
+										<div class="tovar-money__price"><span class="tovar-money__price__number">3 990</span><i class="fa fa-rub"></i></div>
+										<div class="tovar-money__addtocart">
+											<button type="submit" class="tovar-money__addtocart__btn">В корзину</button>
+										</div>
+										<div class="tovar-money__outofstock"><i class="fa fa-circle tovar-money__outofstock__point"></i><span class="tovar-money__outofstock__status">В наличии</span></div>
+									</div>
+								</div>
+							</li>
+							<li class="products__item">
+								<div class="tovar">
+									<div class="tovar-foto">
+										<div class="tovar-foto__large"><img src="../loft2/img/products/fly-1.png" alt="Fly IQ434 Era Nano 5" class="tovar-foto__large-img"/></div>
+										<ul class="tovar-foto-small__list">
+											<li class="tovar-foto-small__item activ"><img src="../loft2/img/products/fly-1.png" alt="Fly IQ434 Era Nano 5" class="tovar-foto-small__item-img"/></li>
+											<li class="tovar-foto-small__item"><img src="../loft2/img/products/fly-2.png" alt="Fly IQ434 Era Nano 5" class="tovar-foto-small__item-img"/></li>
+											<li class="tovar-foto-small__item"><img src="../loft2/img/products/fly-3.png" alt="Fly IQ434 Era Nano 5" class="tovar-foto-small__item-img"/></li>
+										</ul>
+										<div class="tovar-art"><span class="tovar-art__type">Артикул</span><span class="tovar-art__number">987441</span></div>
+									</div>
+									<div class="tovar-descr">
+										<div class="tovar-descr__name">Fly IQ434 Era Nano 5</div>
+										<div class="tovar-descr__desc">Смартфон Fly IQ434 Era Nano 5 оснащен 3.5&quot; дисплеем и двумя слотами для SIM-карт. Android 2.3, Micro SD, Wi-Fi...</div>
+										<div class="tovar-characteristics">
+											<ul class="tovar-characteristics__list">
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Тип SIM-карты</span><span class="characteristics__desc">Micro-SIM</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Количество SIM-карт</span><span class="characteristics__desc">2</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Цвет</span><span class="characteristics__desc">Черный</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">ОС</span><span class="characteristics__desc">Android</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Свзяь 3G</span><span class="characteristics__desc">Нет</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">4G(LTE)</span><span class="characteristics__desc">Нет</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">GPS-модуль</span><span class="characteristics__desc">Нет</span></li>
+											</ul>
+										</div>
+										<div class="tovar-descr__rating"><span data-rating="3" class="tovar-descr__rating-item"><span class="fill-rating"></span></span><span class="rating__number">3</span></div>
+									</div>
+									<div class="tovar-money">
+										<div class="tovar-money__price"><span class="tovar-money__price__number">1 790</span><i class="fa fa-rub"></i></div>
+										<div class="tovar-money__addtocart">
+											<button type="submit" class="tovar-money__addtocart__btn">В корзину</button>
+										</div>
+										<div class="tovar-money__outofstock"><i class="fa fa-circle tovar-money__outofstock__point"></i><span class="tovar-money__outofstock__status">В наличии</span></div>
+									</div>
+								</div>
+							</li>
+							<li class="products__item">
+								<div class="tovar">
+									<div class="tovar-foto">
+										<div class="tovar-foto__large"><img src="../loft2/img/products/highscreen-1.png" alt="HIGHSCREEN WinWin Black" class="tovar-foto__large-img"/></div>
+										<ul class="tovar-foto-small__list">
+											<li class="tovar-foto-small__item activ"><img src="../loft2/img/products/highscreen-1.png" alt="HIGHSCREEN WinWin Black" class="tovar-foto-small__item-img"/></li>
+											<li class="tovar-foto-small__item"><img src="../loft2/img/products/highscreen-2.png" alt="HIGHSCREEN WinWin Black" class="tovar-foto-small__item-img"/></li>
+											<li class="tovar-foto-small__item"><img src="../loft2/img/products/highscreen-3.png" alt="HIGHSCREEN WinWin Black" class="tovar-foto-small__item-img"/></li>
+										</ul>
+										<div class="tovar-art"><span class="tovar-art__type">Артикул</span><span class="tovar-art__number">451781</span></div>
+									</div>
+									<div class="tovar-descr">
+										<div class="tovar-descr__name">HIGHSCREEN WinWin Black</div>
+										<div class="tovar-descr__desc">Смартфон HIGHSCREEN WinWin Black оснащен 4&quot; дисплеем и двумя слотами для SIM-карт. Windows Phone , 3G, Bluetooth, USB-подключение к ПК...</div>
+										<div class="tovar-characteristics">
+											<ul class="tovar-characteristics__list">
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Тип SIM-карты</span><span class="characteristics__desc">Micro-SIM</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Количество SIM-карт</span><span class="characteristics__desc">2</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Цвет</span><span class="characteristics__desc">Черный</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">ОС</span><span class="characteristics__desc">Windows Phone</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">Свзяь 3G</span><span class="characteristics__desc">Есть</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">4G(LTE)</span><span class="characteristics__desc">Нет</span></li>
+												<li class="tovar-characteristics__item"><span class="characteristics__type">GPS-модуль</span><span class="characteristics__desc">Есть</span></li>
+											</ul>
+										</div>
+										<div class="tovar-descr__rating"><span data-rating="4.5" class="tovar-descr__rating-item"><span class="fill-rating"></span></span><span class="rating__number">4.5</span></div>
+									</div>
+									<div class="tovar-money">
+										<div class="tovar-money__price"><span class="tovar-money__price__number">3 900</span><i class="fa fa-rub"></i></div>
+										<div class="tovar-money__addtocart">
+											<button type="submit" class="tovar-money__addtocart__btn">В корзину</button>
+										</div>
+										<div class="tovar-money__outofstock"><i class="fa fa-circle tovar-money__outofstock__point"></i><span class="tovar-money__outofstock__status">В наличии</span></div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</section>
+					<div class="page-nav">
+						<ul class="page-nav__list">
+							<li class="page-nav__item"><a href="#" class="page-nav__link">&lt;</a></li>
+							<li class="page-nav__item"><a href="#" class="page-nav__link">1</a></li>
+							<li class="page-nav__item"><a href="#" class="page-nav__link activ">2</a></li>
+							<li class="page-nav__item"><a href="#" class="page-nav__link">3</a></li>
+							<li class="page-nav__item"><a href="#" class="page-nav__link">&gt;</a></li>
+						</ul>
+					</div>
+				</main>
+				<div class="content_bottom">
+					<div class="content_bottom_title">
+						<h2 class="title-section">Важная информация</h2>
+					</div>
+					<div class="content_bottom_text">
+						<p class="par">
+							Повседневная практика показывает, что сложившаяся структура организации влечет за собой
+							процесс внедрения и модернизации позиций, занимаемых участниками в отношении
+							поставленных задач. Значимость этих проблем настолько очевидна, что реализация
+							намеченных плановых заданий в значительной степени обуславливает создание модели
+							развития. Таким образом консультация с широким активом представляет собой интересный
+							эксперимент проверки модели развития.
+						</p>
+						<p class="par">
+							Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет
+							оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким
+							бразом сложившаяся структура организации требуют определения и уточнения направлений
+							прогрессивного развития. Равным образом консультация с широким активом влечет за собой
+							процесс внедрения и модернизации соответствующий условий активизации
+						</p>
+						<p class="par">
+							Идейные соображения высшего порядка, а также начало повседневной работы по ормированию
+							позиции позволяет оценить значение соответствующий условий активизации. С другой
+							стороны сложившаяся структура организации позволяет оценить значение системы обучения
+							кадров, соответствует насущным потребностям.
+						</p>
+						<p class="par">
+							Повседневная практика показывает, что сложившаяся структура организации влечет за собой
+							процесс внедрения и модернизации позиций, занимаемых участниками в отношении
+							поставленных задач. Значимость этих проблем настолько очевидна, что реализация
+							намеченных плановых заданий в значительной степени обуславливает создание модели
+							развития. Таким образом консультация с широким активом представляет собой интересный
+							эксперимент проверки модели развития.
+						</p>
+						<p class="par">
+							Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет
+							оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким
+							бразом сложившаяся структура организации требуют определения и уточнения направлений
+							прогрессивного развития. Равным образом консультация с широким активом влечет за собой
+							процесс внедрения и модернизации соответствующий условий активизации
+						</p>
+						<p class="par">
+							Идейные соображения высшего порядка, а также начало повседневной работы по ормированию
+							позиции позволяет оценить значение соответствующий условий активизации. С другой
+							стороны сложившаяся структура организации позволяет оценить значение системы обучения
+							кадров, соответствует насущным потребностям.
+						</p>
 					</div>
 				</div>
 			</div>
+			<div class="empty"></div>
 		</div>
-		<div class="footer-bottom"><span class="copyright">  All rights reserved. 2016. no copy alowed</span></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/jquery-1.12.0.min.js"><\/script>');</script>
-		<script src="js/jquery.formstyler.js"></script>
-		<script src="js/jquery-ui.min.js"></script>
-		<script src="js/jquery.columnizer.min.js"></script>
-		<script src="js/main.js"></script>
-	</footer>
-</body>
+		<footer class="footer">
+			<div class="footer-content">
+				<div class="footer-top">
+					<div class="footer-logo"><img src="img/logo_footer.png" alt="Лого" class="footer-logo__img"></div>
+					<div class="footer-links">
+						<div class="footer-socials">
+							<ul class="socials__list">
+								<li class="socials__item"><a href="#" target="_blank" class="socials__link fbbottom">fb</a></li>
+								<li class="socials__item"><a href="#" target="_blank" class="socials__link vkbottom">vk</a></li>
+								<li class="socials__item"><a href="#" target="_blank" class="socials__link twbottom">tw</a></li>
+							</ul>
+						</div>
+						<div class="footer-nav">
+							<ul class="nav__list">
+								<li class="nav__item"><a href="#" class="nav__link">Планшеты</a></li>
+								<li class="nav__item activ"><a href="#" class="nav__link">Мобильные телефоны</a></li>
+								<li class="nav__item"><a href="#" class="nav__link">Mp3 плееры</a></li>
+								<li class="nav__item"><a href="#" class="nav__link">Персональные компьютеры</a></li>
+								<li class="nav__item"><a href="#" class="nav__link">Ноутбуки</a></li>
+								<li class="nav__item"><a href="#" class="nav__link">Аксессуары</a></li>
+								<li class="nav__item"><a href="#" class="nav__link">Бытовая техника</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom"><span class="copyright">  All rights reserved. 2016. no copy alowed</span></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+			<script>window.jQuery || document.write('<script src="js/jquery-1.12.0.min.js"><\/script>');</script>
+			<script src="js/jquery.formstyler.js"></script>
+			<script src="js/jquery-ui.min.js"></script>
+			<script src="js/jquery.columnizer.min.js"></script>
+			<script src="js/main.js"></script>
+		</footer>
+	</body>
+</html>

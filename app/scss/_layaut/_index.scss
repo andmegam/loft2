@@ -4,7 +4,6 @@
 		@include border-radius(5px);
 		background-color: #e4ebee;
 		border: solid 1px #dee1e4;
-		//overflow: hidden;
 		display: table;
 		width: 100%;
 		height: 55px;
@@ -50,16 +49,20 @@
 
 				.viewcatalog__link {
 					display: table-cell;
+					&.viewcontent {@include sprite($viewcontent);}
+
 					&.viewtable {@include sprite($viewtable);}
 					&.viewlist {@include sprite($viewlist);}
-					&.viewcontent {@include sprite($viewcontent);}
+
 				}
 
 				&.activ, &:hover {
 					.viewcatalog__link {
+						&.viewcontent {@include sprite($viewcontent-hover);}
+
 						&.viewtable {@include sprite($viewtable-hover);}
 						&.viewlist {@include sprite($viewlist-hover);}
-						&.viewcontent {@include sprite($viewcontent-hover);}
+
 					}
 				}
 			}
@@ -67,21 +70,29 @@
 		}
 	}
 
-	.products {
-		background-color: #fbfbfb;
-		@include border-radius(5px);
-		border: solid 1px #dee1e4;
-	}
 
-	// Первй вид
-	.viewcontent {
+
+	// Первый вид
+	.viewtable {
+
+		&.products {
+			background-color: #fbfbfb;
+			@include border-radius(5px);
+			border: solid 1px #dee1e4;
+		}
+
 		.products__list {
 			.products__item {
+
 				padding: 20px 25px 13px 20px;
-				border-top: solid 1px #dee1e4;
+				border-top: 1px solid #dee1e4;
 
 				&:first-child {
-					border-top: 0;
+					border-top: 0px;
+				}
+
+				&:hover {
+					box-shadow: -1px 1px 5.7px 1px rgba(118, 118, 118, 0.75);
 				}
 
 				.tovar {
@@ -121,8 +132,14 @@
 									margin-right: 0;
 								}
 
-								&:hover {
+								&:hover, &.activ {
 									border: 1px solid #F60;
+									cursor: pointer;
+								}
+
+								.tovar-foto-small__item-img {
+									max-width: 100%;
+									max-height: 100%;
 								}
 							}
 						}
@@ -160,42 +177,69 @@
 
 						.tovar-descr__desc {
 							font-size: 14px;
-							height: 90px;
 							overflow: hidden;
 							font-family: 'open_sansregular';
+							margin-bottom: 18px;
 						}
 
-						.rating__list {
-							display: inline-block;
-							margin-right: 15px;
-							.rating__item {
-								width: 15px;
-								height: 15px;
+						.tovar-descr__rating {
+							.tovar-descr__rating-item {
+								width: 95px;
 								display: inline-block;
-								vertical-align: middle;
-								font-size: 0;
+								background-image: url('../img/spriteicon/starwhite1.png');
+								background-repeat: repeat-x;
+								height: 16px;
+								text-align: left;
 
-								&.starred {
-									@include sprite($starred);
-								}
-
-								&.starwhite {
-									@include sprite($starwhite);
+								.fill-rating {
+									width: 67px;
+									display: inline-block;
+									background-image: url('../img/spriteicon/starred1.png');
+									margin: -1px 0 0 0px;
+									height: 16px;
 								}
 							}
+							.rating__number {
+								padding: 0 10px;
+								margin-left: 13px;
+								display: inline-block;
+								vertical-align: top;
 
+								background-color: #b5beca;
+								font-size: 12px;
+								font-family: 'open_sansbold';
+								color: #FFF;
+								@include border-radius(10px);
+							}
 						}
-						.rating__number {
-
-							padding: 0 10px;
-							background-color: #b5beca;
-							font-size: 12px;
-							font-family: 'open_sansbold';
-							color: #FFF;
-							@include border-radius(10px);
-						}
-
 					}
+
+					// Характеристики товара
+					.tovar-characteristics {
+						display: none;
+						.tovar-characteristics__list {
+							.tovar-characteristics__item {
+								@extend %clearfix;
+								font-size: 14px;
+								font-family: 'open_sansregular';
+
+
+								&:nth-child(2n-1) {
+									background: #e6e6e6;
+								}
+
+								.characteristics__type {
+									float: left;
+								}
+
+								.characteristics__desc {
+									float: right;
+								}
+							}
+						}
+					}
+
+
 					.tovar-money {
 						&:after {
 							content : "";
@@ -247,7 +291,7 @@
 								background-image: linear-gradient(56deg, #f60, #ff6e35 99%);
 
 								&:hover {
-									font-size: 15px;
+									background: #FA8F49;
 								}
 							}
 						}
@@ -273,10 +317,235 @@
 
 			}
 		}
+	} // .viewtable
+
+	// Второй вид
+	.viewcontent {
+
+		.products__list {
+			.products__item {
+
+				&:nth-child(3n) {
+					margin-right: 0;
+				}
+
+				display: inline-block;
+				padding: 20px 10px 13px 10px;
+				background-color: #fbfbfb;
+				@include border-radius(5px);
+				border: 1px solid #dee1e4;
+				width: 234px;
+
+				margin-right: 16px;
+				margin-bottom: 16px;
+
+				&:hover {
+					box-shadow: -1px 1px 5.7px 1px rgba(118, 118, 118, 0.75);
+				}
+
+				.tovar {
+					display: block;
+					position: relative;
+					text-align: center;
+
+					.tovar-foto {
+						text-align: center;
+						.tovar-foto__large {
+							width: 136px;
+							height: 136px;
+							background-color: #FFF;
+							border: 1px solid #dee1e4;
+							padding: 5px;
+							@include border-radius(2px);
+							margin: 0 auto;
+							margin-bottom: 15px;
+						}
+						// Миниатюры
+						.tovar-foto-small__list {
+							margin-bottom: 4px;
+
+							.tovar-foto-small__item {
+								width: 35px;
+								height: 35px;
+								display: inline-block;
+								@include border-radius(2px);
+								border: 1px solid #dee1e4;
+								text-align: center;
+								vertical-align: middle;
+								margin-right: 10px;
+								padding: 2px;
+
+								&:last-child {
+									margin-right: 0;
+								}
+
+								&:hover, &.activ {
+									border: 1px solid #F60;
+									cursor: pointer;
+								}
+
+								.tovar-foto-small__item-img {
+									max-width: 100%;
+									max-height: 100%;
+								}
+							}
+						}
+
+						.tovar-art {display: none;}
+					}
+
+					.tovar-descr {
+						display: block;
+						//padding: 0 22px;
+						text-align: center;
+						font-size: 16px;
+
+						.tovar-descr__name {
+							display: inline-block;
+							min-height: 50px;
+							font-size: 14px;
+							padding: 6px 0 0px 0;
+							font-family: 'open_sanssemibold';
+						}
+
+						.tovar-descr__desc {
+							display: none;
+						}
+						// Характеристики товара
+						.tovar-characteristics {
+							display: block;
+							margin-bottom: 10px;
+							.tovar-characteristics__list {
+								.tovar-characteristics__item {
+									@extend %clearfix;
+									font-size: 14px;
+									font-family: 'open_sansregular';
+
+
+									&:nth-child(2n-1) {
+										background: #e6e6e6;
+									}
+
+									.characteristics__type {
+										float: left;
+									}
+
+									.characteristics__desc {
+										float: right;
+									}
+								}
+							}
+						}
+						// Рейтинг
+						.tovar-descr__rating {
+							margin-top: 18px;
+							.tovar-descr__rating-item {
+								width: 95px;
+								display: inline-block;
+								background-image: url('../img/spriteicon/starwhite1.png');
+								background-repeat: repeat-x;
+								height: 16px;
+								text-align: left;
+
+								.fill-rating {
+									width: 67px;
+									display: inline-block;
+									background-image: url('../img/spriteicon/starred1.png');
+									margin: -1px 0 0 0px;
+									height: 16px;
+								}
+							}
+							.rating__number {
+								padding: 0 10px;
+								margin-left: 13px;
+								display: inline-block;
+								vertical-align: top;
+
+								background-color: #b5beca;
+								font-size: 12px;
+								font-family: 'open_sansbold';
+								color: #FFF;
+								@include border-radius(10px);
+							}
+						}
+					}
+
+					.tovar-money {
+						.tovar-money__price {
+							text-align: center;
+							.tovar-money__price__number {
+								font-size: 20px;
+								font-family: 'open_sanssemibold';
+								margin-right: 3px;
+							}
+						}
+
+						@extend %clearfix;
+
+						// В корзину
+						.tovar-money__addtocart {
+							float:right;
+
+							.tovar-money__addtocart__btn {
+								width: 103px;
+								height: 33px;
+								margin-bottom: 2px;
+								color: #FFF;
+								font-size: 14px;
+								font-family: 'open_sansbold';
+
+								border: 1px solid transparent;
+								outline: 0 !important;
+
+								-webkit-border-radius: 0 3px 3px 0;
+								-moz-border-radius: 0 3px 3px 0;
+								@include border-radius(5px);
+								background-color: #f60;
+								background-image: -webkit-linear-gradient(56deg, #f60, #ff6e35 99%);
+								background-image: -moz-linear-gradient(56deg, #f60, #ff6e35 99%);
+								background-image: -o-linear-gradient(56deg, #f60, #ff6e35 99%);
+								background-image: -ms-linear-gradient(56deg, #f60, #ff6e35 99%);
+								background-image: linear-gradient(56deg, #f60, #ff6e35 99%);
+
+								&:hover {
+									background: #FA8F49;
+								}
+							}
+						}
+						// В наличии
+						.tovar-money__outofstock {
+							float: left;
+							margin: 4px 0 0 12px;
+							.tovar-money__outofstock__point {
+								font-size: 7px;
+								color: #60ac49;
+								display: inline-block;
+								vertical-align: middle;
+							}
+
+							.tovar-money__outofstock__status {
+								font-size: 12px;
+								font-family: 'open_sansbold';
+								color: #7f7f7f;
+								padding-left: 7px;
+							}
+						}
+					}
+				}
+
+			}
+		}
 	} // .viewcontent
 
 	// Третий вид
 	.viewlist {
+
+		&.products {
+			background-color: #fbfbfb;
+			@include border-radius(5px);
+			border: solid 1px #dee1e4;
+		}
+
 		.products__list {
 			.products__item {
 				padding: 10px 10px 5px 10px;
@@ -333,11 +602,8 @@
 						padding: 0 10px;
 						font-size: 16px;
 
-						.tovar-descr__name {
+						.tovar-descr__name, .tovar-characteristics {
 							display: none;
-							/*font-size: 16px;
-							padding: 0 0 20px 0;
-							font-family: 'open_sanssemibold';*/
 						}
 
 						.tovar-descr__desc {
@@ -398,7 +664,7 @@
 								background-image: linear-gradient(56deg, #f60, #ff6e35 99%);
 
 								&:hover {
-									font-size: 15px;
+									background: #FA8F49;
 								}
 							}
 						}
@@ -428,4 +694,32 @@
 		}
 	} // .viewlist
 
+	// Постараничная навигация
+	.page-nav {
+		text-align: right;
+		margin-top: 65px;
+		.page-nav__item {
+			display: inline-block;
+
+			.page-nav__link {
+				text-align: center;
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				font-size: 12px;
+				font-family: 'open_sansbold';
+				color: #7f7f7f;
+				padding-top: 2px;
+				@include border-radius(3px);
+				background-color: #fbfbfb;
+				border: 1px solid #DEE1E4;
+				text-decoration: none;
+
+				&:hover, &.activ {
+					background-color: #E0E0E0;
+				}
+			}
+		}
+	}
 }
+
