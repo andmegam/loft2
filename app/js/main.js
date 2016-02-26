@@ -17,12 +17,10 @@
    * Обработчики каталога
    */
   function attachEvents() {
-    $('.filters__link').on('click', getFiltersAccord);
     $('.filters__clear').on('click', clearCheckbox);
     $('.viewcatalog__item').on('click', updateViewCatalog);
     $('.tovar-foto-small__item').on('click', getNewFotoTovar);
     $('.rating__number').bind('DOMSubtreeModified', changeRating);
-
   }
 
   /**
@@ -32,7 +30,6 @@
     $('.tovar-descr__rating-item').each(function(e) {
       var $this = $(this),
           rating = $this.attr('data-rating');
-
           setRating($this, rating);
     });
   }
@@ -58,7 +55,7 @@
    */
   function changeRating(e) {
     var $this = $(this),
-        newRating = Number($this.html()),
+        newRating = parseInt($this.text()),
         $element = $this
                     .closest('.tovar-descr__rating')
                     .find('.tovar-descr__rating-item');
@@ -79,31 +76,6 @@
         blockcolumnize.children('.par').addClass('dontsplit');
         blockcolumnize.columnize({columns:2});
    }
-  /**
-   * Фильтрация товара - Аккордеон
-   */
-  function getFiltersAccord (event){
-    event.preventDefault();
-    var $this = $(this),
-        item = $this.closest('.filters__item'),
-        list = $this.closest('.filters__list'),
-        items = list.find('.filters__link'),
-        content= item.find('.filter__inner'),
-        otherContent = list.find('.filter__inner'),
-        duration = 800;
-
-    if (!$this.hasClass('activ')) {
-      // Открытие контента
-      content.stop(true).slideDown( function(){
-        $this.addClass('activ'), duration
-      })
-    }else {
-      // Закрытие контента
-      content.stop(true).slideUp( function(){
-        $this.removeClass('activ'), duration
-      })
-    }
-  };
 
   /**
    * Сброс чекбоксов
@@ -142,10 +114,9 @@
   function updateViewCatalog (event) {
     event.preventDefault();
     var $this = $(this),
-        view = 'products ' +
-          $this
-          .find('.viewcatalog__link')
-          .attr('id');
+        view = $this
+                .find('.viewcatalog__link')
+                .attr('id');
 
       $this
         .addClass('activ')
@@ -154,7 +125,7 @@
 
       $('.products')
         .removeClass()
-        .addClass(view);
+        .addClass('products ' + view);
   };
 
   /**
@@ -173,4 +144,31 @@
         .siblings()
         .removeClass('activ');
   };
+})();
+
+/**
+ * Фильтрация товара - Аккордеон
+ */
+(function(){
+   $('.filters__link').on('click', function(event){
+    event.preventDefault();
+    var $this = $(this),
+        item = $this.closest('.filters__item'),
+        list = $this.closest('.filters__list'),
+        items = list.find('.filters__link'),
+        content= item.find('.filter__inner'),
+        otherContent = list.find('.filter__inner'),
+        duration = 300;
+
+    if (!$this.hasClass('activ')) {
+      // Открытие контента
+      content.stop(true, true).slideDown(duration);
+      $this.addClass('activ');
+
+    }else {
+      // Закрытие контента
+      content.stop(true, true).slideUp(duration);
+      $this.removeClass('activ');
+    }
+  });
 })();
