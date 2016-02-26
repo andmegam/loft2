@@ -19,7 +19,6 @@
   function attachEvents() {
     $('.filters__link').on('click', getFiltersAccord);
     $('.filters__clear').on('click', clearCheckbox);
-    $('.color__item').on('click', getColor);
     $('.viewcatalog__item').on('click', updateViewCatalog);
     $('.tovar-foto-small__item').on('click', getNewFotoTovar);
     $('.rating__number').bind('DOMSubtreeModified', changeRating);
@@ -114,7 +113,7 @@
 
     $(this)
       .closest('.filters__item')
-      .find('.checkbox')
+      .find('input:checkbox')
       .prop('checked', false);
   }
 
@@ -135,16 +134,6 @@
 
     $("#money-begin").val($('#slider-range').slider( "values", 0 ));
     $("#money-end").val($('#slider-range').slider( "values", 1 ));
-  }
-
-  /**
-   * Выбор цвета
-   */
-  function getColor (event){
-    $(this)
-      .addClass('activ')
-      .siblings()
-      .removeClass('activ');
   }
 
   /**

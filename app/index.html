@@ -72,107 +72,145 @@
 						<li class="mobile-type__item"><a href="#" class="mobile-type__link">Флагманы</a></li>
 						<li class="mobile-type__item"><a href="#" class="mobile-type__link">Бюджетная линейка</a></li>
 					</ul>
-					<ul class="filters__list">
-						<li class="filters__item"><a href="#" class="filters__link">Наличие в магазинах<i class="arrow icon">arrow</i></a>
-							<div class="filter__inner">
-								<ul class="instore__list radiogroup">
-									<li class="instore__item">
-										<input type="radio" checked name="filter" id="all_stores" class="radio">
-										<label for="all_stores" class="label">Во всех магазинах</label>
-									</li>
-									<li class="instore__item">
-										<input type="radio" name="filter" id="nearest_store" class="radio">
-										<label for="nearest_store" class="label">В ближайшем ко мне магазине</label>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class="filters__item"><a href="#" class="filters__link">Бренды<i class="arrow icon">arrow</i></a>
-							<div class="filter__inner">
-								<ul class="brand__list checkboxgroup">
-									<li class="brand__item">
-										<input type="checkbox" name="lenovo" id="lenovo" class="checkbox">
-										<label for="lenovo" class="label">Lenovo</label>
-									</li>
-									<li class="brand__item">
-										<input type="checkbox" name="apple" id="apple" class="checkbox">
-										<label for="apple" class="label">Apple</label>
-									</li>
-									<li class="brand__item">
-										<input type="checkbox" name="samsung" id="samsung" class="checkbox">
-										<label for="samsung" class="label">Samsung</label>
-									</li>
-									<li class="brand__item">
-										<input type="checkbox" name="asus" id="asus" class="checkbox">
-										<label for="asus" class="label">Asus</label>
-									</li>
-									<li class="brand__item">
-										<input type="checkbox" name="motorola" id="motorola" class="checkbox">
-										<label for="motorola" class="label">Motorola</label>
-									</li>
-								</ul><a href="#" class="filters__clear">Сбросить фильтр</a>
-							</div>
-						</li>
-						<li class="filters__item"><a href="#" class="filters__link">Цена<i class="arrow icon">arrow</i></a>
-							<div class="filter__inner">
-								<div class="money-range">
-									<div class="money-range__money_begin">
-										<label for="money-begin" class="money-range__label">от</label>
-										<input type="text" id="money-begin" class="money-range__money">
-									</div>
-									<div class="money-range__money_end">
-										<label for="money-end" class="money-range__label">до</label>
-										<input type="text" id="money-end" class="money-range__money">
-									</div>
+					<form class="filters__form">
+						<ul class="filters__list">
+							<li class="filters__item"><a href="#" class="filters__link">Наличие в магазинах<i class="arrow icon">arrow</i></a>
+								<div class="filter__inner">
+									<ul class="instore__list radiogroup">
+										<li class="instore__item">
+											<input type="radio" checked name="filter" id="all_stores" class="radio">
+											<label for="all_stores" class="label">Во всех магазинах</label>
+										</li>
+										<li class="instore__item">
+											<input type="radio" name="filter" id="nearest_store" class="radio">
+											<label for="nearest_store" class="label">В ближайшем ко мне магазине</label>
+										</li>
+									</ul>
 								</div>
-								<div id="slider-range" class="money-range__slider"></div>
-							</div>
-						</li>
-						<li class="filters__item"><a href="#" class="filters__link">Цвет<i class="arrow icon">arrow</i></a>
-							<div class="filter__inner">
-								<ul class="color__list">
-									<li class="color__item"><span class="color__white"></span></li>
-									<li class="color__item color__very-light-grey activ"></li>
-									<li class="color__item color__black"></li>
-									<li class="color__item color__prussian-blue"></li>
-									<li class="color__item color__red"></li>
-									<li class="color__item color__yellow"></li>
-									<li class="color__item color__sunshade"></li>
-									<li class="color__item color__gossip"></li>
-									<li class="color__item color__summer-sky"></li>
-									<li class="color__item color__ce-soir"></li>
-									<li class="color__item color__pale-violet-red"></li>
-									<li class="color__item color__russet"></li>
-								</ul>
-							</div>
-						</li>
-						<li class="filters__item"><a href="#" class="filters__link">Операционные системы<i class="arrow icon">arrow</i></a>
-							<div class="filter__inner">
-								<ul class="os__list checkboxgroup">
-									<li class="os__item">
-										<input type="checkbox" name="android" id="android" class="checkbox">
-										<label for="android" class="label">Android</label>
-									</li>
-									<li class="os__item">
-										<input type="checkbox" name="ios" id="ios" class="checkbox">
-										<label for="ios" class="label">iOS</label>
-									</li>
-									<li class="os__item">
-										<input type="checkbox" name="windowsmobile" id="windowsmobile" class="checkbox">
-										<label for="windowsmobile" class="label">Windows Mobile</label>
-									</li>
-									<li class="os__item">
-										<input type="checkbox" name="symbian" id="symbian" class="checkbox">
-										<label for="symbian" class="label">Symbian</label>
-									</li>
-									<li class="os__item">
-										<input type="checkbox" name="custom" id="custom" class="checkbox">
-										<label for="custom" class="label">Custom</label>
-									</li>
-								</ul><a href="#" class="filters__clear">Сбросить фильтр</a>
-							</div>
-						</li>
-					</ul>
+							</li>
+							<li class="filters__item"><a href="#" class="filters__link">Бренды<i class="arrow icon">arrow</i></a>
+								<div class="filter__inner">
+									<ul class="brand__list checkboxgroup">
+										<li class="brand__item">
+											<input type="checkbox" name="lenovo" id="lenovo" class="checkbox">
+											<label for="lenovo" class="label">Lenovo</label>
+										</li>
+										<li class="brand__item">
+											<input type="checkbox" name="apple" id="apple" class="checkbox">
+											<label for="apple" class="label">Apple</label>
+										</li>
+										<li class="brand__item">
+											<input type="checkbox" name="samsung" id="samsung" class="checkbox">
+											<label for="samsung" class="label">Samsung</label>
+										</li>
+										<li class="brand__item">
+											<input type="checkbox" name="asus" id="asus" class="checkbox">
+											<label for="asus" class="label">Asus</label>
+										</li>
+										<li class="brand__item">
+											<input type="checkbox" name="motorola" id="motorola" class="checkbox">
+											<label for="motorola" class="label">Motorola</label>
+										</li>
+									</ul><a href="#" class="filters__clear">Сбросить фильтр</a>
+								</div>
+							</li>
+							<li class="filters__item"><a href="#" class="filters__link">Цена<i class="arrow icon">arrow</i></a>
+								<div class="filter__inner">
+									<div class="money-range">
+										<div class="money-range__money_begin">
+											<label for="money-begin" class="money-range__label">от</label>
+											<input type="text" id="money-begin" class="money-range__money">
+										</div>
+										<div class="money-range__money_end">
+											<label for="money-end" class="money-range__label">до</label>
+											<input type="text" id="money-end" class="money-range__money">
+										</div>
+									</div>
+									<div id="slider-range" class="money-range__slider"></div>
+								</div>
+							</li>
+							<li class="filters__item"><a href="#" class="filters__link">Цвет<i class="arrow icon">arrow</i></a>
+								<div class="filter__inner">
+									<ul class="color__list">
+										<li class="color__item">
+											<input id="color__white" type="checkbox" name="color" class="color__item-checkbox">
+											<label for="color__white" class="color__item-label color__white"></label>
+										</li>
+										<li class="color__item">
+											<input id="color__very-light-grey" type="checkbox" checked name="color" class="color__item-checkbox">
+											<label for="color__very-light-grey" class="color__item-label color__very-light-grey"></label>
+										</li>
+										<li class="color__item">
+											<input id="color__black" type="checkbox" name="color" class="color__item-checkbox">
+											<label for="color__black" class="color__item-label color__black"></label>
+										</li>
+										<li class="color__item">
+											<input id="color__prussian-blue" type="checkbox" name="color" class="color__item-checkbox">
+											<label for="color__prussian-blue" class="color__item-label color__prussian-blue"></label>
+										</li>
+										<li class="color__item">
+											<input id="color__red" type="checkbox" name="color" class="color__item-checkbox">
+											<label for="color__red" class="color__item-label color__red"></label>
+										</li>
+										<li class="color__item">
+											<input id="color__yellow" type="checkbox" name="color" class="color__item-checkbox">
+											<label for="color__yellow" class="color__item-label color__yellow"></label>
+										</li>
+										<li class="color__item">
+											<input id="color__sunshade" type="checkbox" name="color" class="color__item-checkbox">
+											<label for="color__sunshade" class="color__item-label color__sunshade"></label>
+										</li>
+										<li class="color__item">
+											<input id="color__gossip" type="checkbox" name="color" class="color__item-checkbox">
+											<label for="color__gossip" class="color__item-label color__gossip"></label>
+										</li>
+										<li class="color__item">
+											<input id="color__summer-sky" type="checkbox" name="color" class="color__item-checkbox">
+											<label for="color__summer-sky" class="color__item-label color__summer-sky"></label>
+										</li>
+										<li class="color__item">
+											<input id="color__ce-soir" type="checkbox" name="color" class="color__item-checkbox">
+											<label for="color__ce-soir" class="color__item-label color__ce-soir"></label>
+										</li>
+										<li class="color__item">
+											<input id="color__pale-violet-red" type="checkbox" name="color" class="color__item-checkbox">
+											<label for="color__pale-violet-red" class="color__item-label color__pale-violet-red"></label>
+										</li>
+										<li class="color__item">
+											<input id="color__russet" type="checkbox" name="color" class="color__item-checkbox">
+											<label for="color__russet" class="color__item-label color__russet"></label>
+										</li>
+									</ul><a href="#" class="filters__clear">Сбросить фильтр</a>
+								</div>
+							</li>
+							<li class="filters__item"><a href="#" class="filters__link">Операционные системы<i class="arrow icon">arrow</i></a>
+								<div class="filter__inner">
+									<ul class="os__list checkboxgroup">
+										<li class="os__item">
+											<input type="checkbox" name="android" id="android" class="checkbox">
+											<label for="android" class="label">Android</label>
+										</li>
+										<li class="os__item">
+											<input type="checkbox" name="ios" id="ios" class="checkbox">
+											<label for="ios" class="label">iOS</label>
+										</li>
+										<li class="os__item">
+											<input type="checkbox" name="windowsmobile" id="windowsmobile" class="checkbox">
+											<label for="windowsmobile" class="label">Windows Mobile</label>
+										</li>
+										<li class="os__item">
+											<input type="checkbox" name="symbian" id="symbian" class="checkbox">
+											<label for="symbian" class="label">Symbian</label>
+										</li>
+										<li class="os__item">
+											<input type="checkbox" name="custom" id="custom" class="checkbox">
+											<label for="custom" class="label">Custom</label>
+										</li>
+									</ul><a href="#" class="filters__clear">Сбросить фильтр</a>
+								</div>
+							</li>
+						</ul>
+					</form>
 				</aside>
 				<main class="main">
 					<section class="view">

@@ -4,87 +4,112 @@ aside.aside
 			a.mobile-type__link(href="#") Флагманы
 		li.mobile-type__item
 			a.mobile-type__link(href="#") Бюджетная линейка
-	ul.filters__list
-		li.filters__item
-			a.filters__link(href="#") Наличие в магазинах
-				i.arrow.icon arrow
-			div.filter__inner
-				ul.instore__list.radiogroup
-					li.instore__item
-						input.radio(type="radio" checked name="filter" id="all_stores")
-						label.label(for="all_stores") Во всех магазинах
-					li.instore__item
-						input.radio(type="radio" name="filter" id="nearest_store")
-						label.label(for="nearest_store") В ближайшем ко мне магазине
-		li.filters__item
-			a.filters__link(href="#") Бренды
-				i.arrow.icon arrow
-			div.filter__inner
-				ul.brand__list.checkboxgroup
-					li.brand__item
-						input.checkbox(type="checkbox" name="lenovo" id="lenovo")
-						label.label(for="lenovo") Lenovo
-					li.brand__item
-						input.checkbox(type="checkbox" name="apple" id="apple")
-						label.label(for="apple") Apple
-					li.brand__item
-						input.checkbox(type="checkbox" name="samsung" id="samsung")
-						label.label(for="samsung") Samsung
-					li.brand__item
-						input.checkbox(type="checkbox" name="asus" id="asus")
-						label.label(for="asus") Asus
-					li.brand__item
-						input.checkbox(type="checkbox" name="motorola" id="motorola")
-						label.label(for="motorola") Motorola
-				a.filters__clear(href="#") Сбросить фильтр
-		li.filters__item
-			a.filters__link(href="#") Цена
-				i.arrow.icon arrow
-			div.filter__inner
-				div.money-range
-					div.money-range__money_begin
-						label.money-range__label(for="money-begin") от
-						input.money-range__money(type="text" id="money-begin")
-					div.money-range__money_end
-						label.money-range__label(for="money-end") до
-						input.money-range__money(type="text" id="money-end")
-				div.money-range__slider(id="slider-range")
-		li.filters__item
-			a.filters__link(href="#") Цвет
-				i.arrow.icon arrow
-			div.filter__inner
-				ul.color__list
-					li.color__item
-						span.color__white
-					li.color__item.color__very-light-grey.activ
-					li.color__item.color__black
-					li.color__item.color__prussian-blue
-					li.color__item.color__red
-					li.color__item.color__yellow
-					li.color__item.color__sunshade
-					li.color__item.color__gossip
-					li.color__item.color__summer-sky
-					li.color__item.color__ce-soir
-					li.color__item.color__pale-violet-red
-					li.color__item.color__russet
-		li.filters__item
-			a.filters__link(href="#") Операционные системы
-				i.arrow.icon arrow
-			div.filter__inner
-				ul.os__list.checkboxgroup
-					li.os__item
-						input.checkbox(type="checkbox" name="android" id="android")
-						label.label(for="android") Android
-					li.os__item
-						input.checkbox(type="checkbox" name="ios" id="ios")
-						label.label(for="ios") iOS
-					li.os__item
-						input.checkbox(type="checkbox" name="windowsmobile" id="windowsmobile")
-						label.label(for="windowsmobile") Windows Mobile
-					li.os__item
-						input.checkbox(type="checkbox" name="symbian" id="symbian")
-						label.label(for="symbian") Symbian
-					li.os__item
-						input.checkbox(type="checkbox" name="custom" id="custom")
-						label.label(for="custom") Custom
-				a.filters__clear(href="#") Сбросить фильтр
+	form.filters__form
+		ul.filters__list
+			li.filters__item
+				a.filters__link(href="#") Наличие в магазинах
+					i.arrow.icon arrow
+				div.filter__inner
+					ul.instore__list.radiogroup
+						li.instore__item
+							input.radio(type="radio" checked name="filter" id="all_stores")
+							label.label(for="all_stores") Во всех магазинах
+						li.instore__item
+							input.radio(type="radio" name="filter" id="nearest_store")
+							label.label(for="nearest_store") В ближайшем ко мне магазине
+			li.filters__item
+				a.filters__link(href="#") Бренды
+					i.arrow.icon arrow
+				div.filter__inner
+					ul.brand__list.checkboxgroup
+						li.brand__item
+							input.checkbox(type="checkbox" name="lenovo" id="lenovo")
+							label.label(for="lenovo") Lenovo
+						li.brand__item
+							input.checkbox(type="checkbox" name="apple" id="apple")
+							label.label(for="apple") Apple
+						li.brand__item
+							input.checkbox(type="checkbox" name="samsung" id="samsung")
+							label.label(for="samsung") Samsung
+						li.brand__item
+							input.checkbox(type="checkbox" name="asus" id="asus")
+							label.label(for="asus") Asus
+						li.brand__item
+							input.checkbox(type="checkbox" name="motorola" id="motorola")
+							label.label(for="motorola") Motorola
+					a.filters__clear(href="#") Сбросить фильтр
+			li.filters__item
+				a.filters__link(href="#") Цена
+					i.arrow.icon arrow
+				div.filter__inner
+					div.money-range
+						div.money-range__money_begin
+							label.money-range__label(for="money-begin") от
+							input.money-range__money(type="text" id="money-begin")
+						div.money-range__money_end
+							label.money-range__label(for="money-end") до
+							input.money-range__money(type="text" id="money-end")
+					div.money-range__slider(id="slider-range")
+			li.filters__item
+				a.filters__link(href="#") Цвет
+					i.arrow.icon arrow
+				div.filter__inner
+					ul.color__list
+						li.color__item
+							input.color__item-checkbox(id="color__white" type="checkbox" name="color")
+							label.color__item-label.color__white(for="color__white")
+						li.color__item
+							input.color__item-checkbox(id="color__very-light-grey" type="checkbox" checked name="color")
+							label.color__item-label.color__very-light-grey(for="color__very-light-grey")
+						li.color__item
+							input.color__item-checkbox(id="color__black" type="checkbox" name="color")
+							label.color__item-label.color__black(for="color__black")
+						li.color__item
+							input.color__item-checkbox(id="color__prussian-blue" type="checkbox" name="color")
+							label.color__item-label.color__prussian-blue(for="color__prussian-blue")
+						li.color__item
+							input.color__item-checkbox(id="color__red" type="checkbox" name="color")
+							label.color__item-label.color__red(for="color__red")
+						li.color__item
+							input.color__item-checkbox(id="color__yellow" type="checkbox" name="color")
+							label.color__item-label.color__yellow(for="color__yellow")
+						li.color__item
+							input.color__item-checkbox(id="color__sunshade" type="checkbox" name="color")
+							label.color__item-label.color__sunshade(for="color__sunshade")
+						li.color__item
+							input.color__item-checkbox(id="color__gossip" type="checkbox" name="color")
+							label.color__item-label.color__gossip(for="color__gossip")
+						li.color__item
+							input.color__item-checkbox(id="color__summer-sky" type="checkbox" name="color")
+							label.color__item-label.color__summer-sky(for="color__summer-sky")
+						li.color__item
+							input.color__item-checkbox(id="color__ce-soir" type="checkbox" name="color")
+							label.color__item-label.color__ce-soir(for="color__ce-soir")
+						li.color__item
+							input.color__item-checkbox(id="color__pale-violet-red" type="checkbox" name="color")
+							label.color__item-label.color__pale-violet-red(for="color__pale-violet-red")
+						li.color__item
+							input.color__item-checkbox(id="color__russet" type="checkbox" name="color")
+							label.color__item-label.color__russet(for="color__russet")
+					a.filters__clear(href="#") Сбросить фильтр
+			li.filters__item
+				a.filters__link(href="#") Операционные системы
+					i.arrow.icon arrow
+				div.filter__inner
+					ul.os__list.checkboxgroup
+						li.os__item
+							input.checkbox(type="checkbox" name="android" id="android")
+							label.label(for="android") Android
+						li.os__item
+							input.checkbox(type="checkbox" name="ios" id="ios")
+							label.label(for="ios") iOS
+						li.os__item
+							input.checkbox(type="checkbox" name="windowsmobile" id="windowsmobile")
+							label.label(for="windowsmobile") Windows Mobile
+						li.os__item
+							input.checkbox(type="checkbox" name="symbian" id="symbian")
+							label.label(for="symbian") Symbian
+						li.os__item
+							input.checkbox(type="checkbox" name="custom" id="custom")
+							label.label(for="custom") Custom
+					a.filters__clear(href="#") Сбросить фильтр

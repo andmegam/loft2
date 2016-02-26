@@ -31,289 +31,264 @@
 /*
  * ФИЛЬТРЫ
  */
-	.filters__list {
-		background-color: #fbfbfb;
-		border: solid 1px #dee1e4;
-		@include border-radius(5px);
+ 	.filters__form
+		.filters__list {
+			background-color: #fbfbfb;
+			border: solid 1px #dee1e4;
+			@include border-radius(5px);
 
-		.filter__inner {
-			display: none;
-		}
-		// Шапка аккордеона
-		.filters__item {
-			padding: 11px 10px 11px 30px;
-			border-top: solid 1px #dee1e4;
-
-			&:first-child {
-				border-top: 0;
+			.filter__inner {
+				display: none;
 			}
+			// Шапка аккордеона
+			.filters__item {
+				padding: 11px 10px 11px 30px;
+				border-top: solid 1px #dee1e4;
 
-			.filters__link {
-				font-size: 16px;
-				font-family: 'open_sanssemibold';
-				text-decoration: none;
-				color: #333;
-				cursor: pointer;
-				width: 100%;
-				display: block;
+				&:first-child {
+					border-top: 0;
+				}
 
-				&:hover {
-					.arrow {
-						display: block;
-						@include sprite($arrow);
-						font-size: 0;
-						float: right;
-						margin-right: 0px;
-						margin-top: 5px;
-						transform: rotate(180deg);
-					}
+				.filters__link {
+					font-size: 16px;
+					font-family: 'open_sanssemibold';
+					text-decoration: none;
+					color: #333;
+					cursor: pointer;
+					width: 100%;
+					display: block;
 
-					&.activ {
+					&:hover {
 						.arrow {
-							transform: rotate(0deg);
+							display: block;
+							@include sprite($arrow);
+							font-size: 0;
+							float: right;
+							margin-right: 0px;
+							margin-top: 5px;
+							transform: rotate(180deg);
+						}
+
+						&.activ {
+							.arrow {
+								transform: rotate(0deg);
+							}
 						}
 					}
 				}
-			}
-			.instore__list {
-				margin-top: 13px;
-				margin-bottom: 7px;
-				.instore__item {
-					margin-bottom: 15px;
-					&:last-child{
-						margin-bottom: 0;
+				.instore__list {
+					margin-top: 13px;
+					margin-bottom: 7px;
+					.instore__item {
+						margin-bottom: 15px;
+						&:last-child{
+							margin-bottom: 0;
+						}
 					}
 				}
-			}
-			.brand__list {
-				margin-top: 15px;
-				margin-bottom: 11px;
-				.brand__item {
-					margin-bottom: 15px;
-					&:last-child{
-						margin-bottom: 0;
+				.brand__list {
+					margin-top: 15px;
+					margin-bottom: 11px;
+					.brand__item {
+						margin-bottom: 15px;
+						&:last-child{
+							margin-bottom: 0;
+						}
 					}
 				}
-			}
 
-			// Сбросить фильтр
-			.filters__clear {
-				display: block;
-				font-size: 14px;
-				font-family: 'open_sansregular';
-				color: #5DB2FC;
-				margin-bottom: 10px;
-			}
-
-			// Диапазон цен
-			.money-range {
-				font-size: 14px;
-				color: #333;
-				@extend %clearfix;
-				margin-top: 15px;
-				margin-bottom: 17px;
-				padding-right: 20px;
-
-				.money-range__label {
+				// Сбросить фильтр
+				.filters__clear {
+					display: block;
+					font-size: 14px;
 					font-family: 'open_sansregular';
-					margin-right: 10px;
+					color: #5DB2FC;
+					margin-bottom: 10px;
 				}
 
-				.money-range__money {
-					font-family: 'open_sanssemibold';
-				}
-				.money-range__money_begin {
-					float: left;
-				}
+				// Диапазон цен
+				.money-range {
+					font-size: 14px;
+					color: #333;
+					@extend %clearfix;
+					margin-top: 15px;
+					margin-bottom: 17px;
+					padding-right: 20px;
 
-				.money-range__money_end {
-					float: right;
-				}
+					.money-range__label {
+						font-family: 'open_sansregular';
+						margin-right: 10px;
+					}
 
-				.money-range__money {
-					width: 81px;
-					height: 28px;
-					outline: 0;
-					padding: 0 12px;
-					@include border-radius(3px);
-					background-color: #fff;
-					-webkit-box-shadow: inset 0 1px 1px rgba(148,148,148,.43);
-					-moz-box-shadow: inset 0 1px 1px rgba(148,148,148,.43);
-					box-shadow: inset 0 1px 1px rgba(148,148,148,.43);
-					border: solid 1px #ebedef;
-				}
-			}
-			.money-range__slider {
-				margin-right: 30px;
-				background-color : #dee1e4;
-				margin-bottom: 22px;
-			}
+					.money-range__money {
+						font-family: 'open_sanssemibold';
+					}
+					.money-range__money_begin {
+						float: left;
+					}
 
-			// Цвет
-			.color__list {
-				margin-top: 12px;
-				margin-bottom: -10px;
-				width: 250px;
-			}
-			.color__item {
+					.money-range__money_end {
+						float: right;
+					}
 
-				display: inline-block;
-				content: "";
-				border: solid 1px #dee1e4;
-				margin: 0 17px 15px 0;
-				@include border-radius(2px);
-				cursor: pointer;
-				@extend %colorblock;
-
-				&:hover {
-					border: solid 1.5px #F60;
-				}
-
-				&.activ {
-					border: solid 2.5px #F60;
-				}
-
-				&.color__white {
-					background-color: #FFF;
-				}
-				&.color__very-light-grey {
-					background-color: #cccccc;
-				}
-				&.color__black {
-					background-color: #000000;
-				}
-				&.color__prussian-blue {
-					background-color: #0a3153;
-				}
-
-				&.color__red {
-					background-color: #ff1800;
-				}
-
-				&.color__yellow {
-					background-color: #fff343;
-				}
-
-				&.color__sunshade {
-					background-color: #FB914A;
-				}
-				&.color__gossip {
-					background-color: #92C37C;
-				}
-				&.color__summer-sky {
-					background-color: #40A6FF;
-				}
-				&.color__ce-soir {
-					background-color: #9870AD;
-				}
-
-				&.color__pale-violet-red {
-					background-color: #DC78AD;
-				}
-
-				&.color__russet {
-					background-color: #7F401D;
-				}
-			}
-
-			// Операционные системы
-			.os__list {
-				margin-top: 12px;
-				margin-bottom: 11px;
-				.os__item {
-					margin-bottom: 15px;
-					&:last-child{
-						margin-bottom: 0;
+					.money-range__money {
+						width: 81px;
+						height: 28px;
+						outline: 0;
+						padding: 0 12px;
+						@include border-radius(3px);
+						background-color: #fff;
+						-webkit-box-shadow: inset 0 1px 1px rgba(148,148,148,.43);
+						-moz-box-shadow: inset 0 1px 1px rgba(148,148,148,.43);
+						box-shadow: inset 0 1px 1px rgba(148,148,148,.43);
+						border: solid 1px #ebedef;
 					}
 				}
-			}
+				.money-range__slider {
+					margin-right: 30px;
+					background-color : #dee1e4;
+					margin-bottom: 22px;
+				}
 
+				// Цвет
+				.color__list {
+					margin-top: 12px;
+					margin-bottom: -10px;
+					width: 250px;
+				}
+				.color__item {
+					display: inline-block;
+					.color__item-checkbox {
+						display: none;
+					}
+					.color__item-label {
+						display: inline-block;
+						content: "";
+						@include border-radius(2px);
+						cursor: pointer;
+						border: solid 1px #dee1e4;
+						margin: 0 17px 15px 0;
+						@extend %colorblock;
+
+						&:hover {border: solid 1.5px #F60;}
+
+						&.color__white {background-color: #FFF;}
+						&.color__very-light-grey {background-color: #cccccc;}
+						&.color__black {background-color: #000000;}
+						&.color__prussian-blue {background-color: #0a3153;}
+						&.color__red {background-color: #ff1800;}
+						&.color__yellow {background-color: #fff343;}
+						&.color__sunshade {background-color: #FB914A;}
+						&.color__gossip {background-color: #92C37C;}
+						&.color__summer-sky {background-color: #40A6FF;}
+						&.color__ce-soir {background-color: #9870AD;}
+						&.color__pale-violet-red {background-color: #DC78AD;}
+						&.color__russet {background-color: #7F401D;}
+					}
+
+					.color__item-checkbox:checked + .color__item-label {
+							border: solid 2.5px #F60;
+					}
+				}
+
+				// Операционные системы
+				.os__list {
+					margin-top: 12px;
+					margin-bottom: 11px;
+					.os__item {
+						margin-bottom: 15px;
+						&:last-child{
+							margin-bottom: 0;
+						}
+					}
+				}
+
+			}
 		}
 	}
-}
 
-.label {
-	display: inline-block;
-	cursor: pointer;
-	position: relative;
-	padding-left: 25px;
-	margin-right: 15px;
-	font-size: 14px;
-	font-family: 'open_sansregular';
-	color: #5d656c;
-}
-
-input[type=radio],
-input[type=checkbox] {
-	display: none;
-}
-.label {
-	padding-left: 30px;
-}
-
-.label:before {
-	content: "";
-	display: inline-block;
-	position: absolute;
-	left: 0;
-	bottom: 0px;
-}
-
-.radiogroup {
- 	.label:before {
-		width: 16px;
-		height: 16px;
-		border: 2px solid #aaa;
-		@include border-radius(50%);
-	}
-
-	.radio + .label:hover:before {
-		content: "\f111";
-		font-family: 'FontAwesome';
+	.label {
+		display: inline-block;
+		cursor: pointer;
+		position: relative;
+		padding-left: 25px;
+		margin-right: 15px;
+		font-size: 14px;
+		font-family: 'open_sansregular';
 		color: #5d656c;
-		border: 2px solid #5d656c;
-		font-size: 12px;
-		line-height: 16px;
-		text-align: center;
-
 	}
 
-	.radio:checked + .label:before {
-		content: "\f111";
-		font-family: 'FontAwesome';
-		color: #f60;
-		border: 2px solid #f60;
-		font-size: 12px;
-		line-height: 16px;
-		text-align: center;
+	input[type=radio],
+	input[type=checkbox] {
+		display: none;
 	}
-}
+	.label {
+		padding-left: 30px;
+	}
 
-.checkboxgroup {
 	.label:before {
-		width: 20px;
-		height: 20px;
-		@include border-radius(3px);
-		background-color: #DEE1E4;
+		content: "";
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		bottom: 0px;
 	}
-}
 
-.checkbox + .label:hover:before {
-	content: "\f00c";
-	font-family: 'FontAwesome';
-	font-size: 18px;
-	background-color: #DEE1E4;
-	color: #333;
-	text-align: center;
-	line-height: 20px;
-}
+	.radiogroup {
+	 	.label:before {
+			width: 16px;
+			height: 16px;
+			border: 2px solid #aaa;
+			@include border-radius(50%);
+		}
 
-.checkbox:checked + .label:before {
-	content: "\f00c";
-	font-family: 'FontAwesome';
-	font-size: 18px;
-	color: #FFF;
-	background-color: #F60;
-	text-align: center;
-	line-height: 20px;
-}
+		.radio + .label:hover:before {
+			content: "\f111";
+			font-family: 'FontAwesome';
+			color: #5d656c;
+			border: 2px solid #5d656c;
+			font-size: 12px;
+			line-height: 16px;
+			text-align: center;
+
+		}
+
+		.radio:checked + .label:before {
+			content: "\f111";
+			font-family: 'FontAwesome';
+			color: #f60;
+			border: 2px solid #f60;
+			font-size: 12px;
+			line-height: 16px;
+			text-align: center;
+		}
+	}
+
+	.checkboxgroup {
+		.label:before {
+			width: 20px;
+			height: 20px;
+			@include border-radius(3px);
+			background-color: #DEE1E4;
+		}
+	}
+
+	.checkbox + .label:hover:before {
+		content: "\f00c";
+		font-family: 'FontAwesome';
+		font-size: 18px;
+		background-color: #DEE1E4;
+		color: #333;
+		text-align: center;
+		line-height: 20px;
+	}
+
+	.checkbox:checked + .label:before {
+		content: "\f00c";
+		font-family: 'FontAwesome';
+		font-size: 18px;
+		color: #FFF;
+		background-color: #F60;
+		text-align: center;
+		line-height: 20px;
+	}
