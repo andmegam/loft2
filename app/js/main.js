@@ -43,9 +43,12 @@
    * Установка рейтинга одному товару
    */
   function setRating($element, rating) {
-    var widthRaiting = 19*rating;
-      if (widthRaiting> 95) {
-        widthRaiting = 95
+    const STARWIDTH = 19, // ширина иконки (звезда)
+          MAXWIDTHRAITING = 95; // Максимальная ширина блока рейтинга товаров
+
+    var widthRaiting = STARWIDTH*rating;
+      if (widthRaiting> MAXWIDTHRAITING) {
+        widthRaiting = MAXWIDTHRAITING
       }
 
       if (widthRaiting < 0) {

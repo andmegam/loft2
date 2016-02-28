@@ -11,6 +11,11 @@ ul {
 	margin: 0;
 }
 
+h1 ,h2 {
+	margin: 0;
+	padding: 0;
+}
+
 p {
 	text-indent: 20px;
 	font-size: 14px;
@@ -20,11 +25,10 @@ p {
 }
 
 .main-title {
-	padding-top: 18px;
 	font-size: 20px;
 	font-family: 'open_sansbold';
 	color: #333;
-	margin-bottom: 28px;
+	margin-bottom: 25px;
 }
 
 .icon {

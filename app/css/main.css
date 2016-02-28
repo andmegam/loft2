@@ -142,6 +142,11 @@ ul {
   margin: 0;
 }
 
+h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
 p {
   text-indent: 20px;
   font-size: 14px;
@@ -151,11 +156,10 @@ p {
 }
 
 .main-title {
-  padding-top: 18px;
   font-size: 20px;
   font-family: 'open_sansbold';
   color: #333;
-  margin-bottom: 28px;
+  margin-bottom: 25px;
 }
 
 .icon {
@@ -3758,6 +3762,7 @@ body .ui-tooltip {
   background-color: #FFF;
   border-bottom: 2px solid  #ebedef;
   text-align: center;
+  margin-bottom: 25px;
 }
 
 .nav__list {
@@ -3787,7 +3792,7 @@ body .ui-tooltip {
 }
 
 .breadcrumbs__list {
-  padding-top: 25px;
+  margin-bottom: 20px;
 }
 
 .breadcrumbs__item {
@@ -3868,7 +3873,7 @@ body .ui-tooltip {
 
 .filter {
   display: none;
-  padding: 5px 30px 17px 30px;
+  padding: 5px 30px 15px 30px;
 }
 
 .filters__item {
