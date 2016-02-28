@@ -1,0 +1,79 @@
+/*--------------- header-top begin----------------*/
+.header-top {
+	// height: 77px;
+	@extend %clearfix;
+	background-color: #FFF;
+	border-bottom: 2px solid  #ebedef;
+}
+.header-top__left {
+	float: left;
+	padding: 25px 0;
+	padding-left: 2px; //pp
+}
+.socials__item {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+	margin-left: 12px;
+
+	&:first-child{
+		margin-left: 0;
+	}
+}
+.socials__link {
+	display: inline-block;
+	font-size: 0;
+	&.fbtop {@include sprite($fbtop);}
+	&.vktop {@include sprite($vktop);}
+	&.twtop {@include sprite($twtop);}
+
+	&.fbtop:hover {@include sprite($fbtop-hover);}
+	&.vktop:hover {@include sprite($vktop-hover);}
+	&.twtop:hover {@include sprite($twtop-hover);}
+}
+
+.header-top__right {
+	float: right;
+	padding: 25px 0 23px 0px;
+}
+
+.phone {
+	display: table-cell;
+	position: relative;
+
+	&__icon {
+		@include sprite($contacts-phone);
+		position: absolute;
+		margin-top: 5px;
+		font-size: 0;
+	}
+
+	&__text {
+		font-size: 18px;
+		font-family: 'open_sanssemibold';
+		color: #333;
+		text-decoration: none;
+		padding-left: 22px;
+	}
+}
+
+.address {
+	display: table-cell;
+	position: relative;
+	padding-right: 85px;
+
+	&__icon {
+		@include sprite($contacts-map);
+		position: absolute;
+		margin-top: 1px;
+		font-size: 0;
+	}
+
+	&__text {
+		font-size: 14px;
+		font-family: 'open_sansregular';
+		color: #333;
+		padding-left: 22px;
+	}
+}
+/*--------------- header-top end ----------------*/

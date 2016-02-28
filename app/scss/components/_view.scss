@@ -1,0 +1,37 @@
+.view {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: right;
+	padding-right: 5px;
+	width: 200px;
+}
+
+.view__list {
+	font-size: 0;
+	float: right;
+}
+
+.view__item {
+	height: 53px;
+	display: table-cell;
+	vertical-align: middle;
+	border-left: 1px solid #dee1e4;
+	padding: 0 17px;
+	cursor: pointer;
+
+	&.active, &:hover {
+		.view__link {
+			&.view__content {@include sprite($viewcontent-hover);}
+			&.view__table {@include sprite($viewtable-hover);}
+			&.view__list {@include sprite($viewlist-hover);}
+		}
+	}
+}
+
+.view__link {
+	display: table-cell;
+	&.view__content {@include sprite($viewcontent);}
+	&.view__table {@include sprite($viewtable);}
+	&.view__list {@include sprite($viewlist);}
+
+}
