@@ -39,7 +39,7 @@ var gulp = require('gulp'),
               }));
 
       spriteData.img.pipe(gulp.dest('./app/img/')); // путь, куда сохраняем картинку
-      spriteData.css.pipe(gulp.dest('./app/scss/_general/')); // путь, куда сохраняем стили
+      spriteData.css.pipe(gulp.dest('./app/scss/basen/')); // путь, куда сохраняем стили
     });
 
     gulp.task('compass', function() {

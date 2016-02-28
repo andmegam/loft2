@@ -1,0 +1,98 @@
+// Третий вид
+.view__list {
+
+	& .products__item {
+		padding: 10px 10px 5px 10px;
+	}
+
+	& .product {
+		display: inline-block;
+		cursor: pointer;
+		width: 100%;
+	}
+
+	& .product-foto {
+		display: table-cell;
+		width: 110px;
+	}
+
+	& .product-foto__large {
+		display: none;
+	}
+
+	& .product-foto-small__list {
+		display: none;
+	}
+
+	& .product-art {
+		text-align: left;
+		padding-top: 8px;
+	}
+
+	& .product-art__type {
+		font-size: 12px;
+		font-family: 'open_sansbold';
+		margin-right: 5px;
+		color: #7f7f7f;
+	}
+
+	& .product-art__number {
+		font-size: 14px;
+		font-family: 'open_sansbold';
+		color: #333;
+	}
+
+	& .product-descr {
+		display: table-cell;
+		vertical-align: middle;
+		width: 285px;
+		padding: 0 10px;
+		font-size: 16px;
+	}
+
+	& .product-descr__name, & .product-characteristics {
+		display: none;
+	}
+
+	& .product-descr__desc {
+		width: 285px;
+		font-size: 14px;
+
+		white-space: nowrap;
+		overflow: hidden;
+		 text-overflow: ellipsis;
+		font-family: 'open_sansregular';
+	}
+
+	& .product-rating {
+		display : none;
+	}
+
+	& .product-money {
+		display: table-cell;
+		vertical-align: top;
+		margin-top: -7px;
+		width: 305px;
+	}
+
+	& .product-money__price {
+		width: 80px;
+		float:left;
+	}
+
+	& .product-money__price__number {
+		font-size: 20px;
+		font-family: 'open_sanssemibold';
+		margin-right: 3px;
+	}
+
+	& .product-money__addtocart {
+		width: 103px;
+		float:right;
+	}
+
+	& .product-money__outofstock {
+		float:right;
+		margin: 8px 20px 0 0;
+	}
+}

@@ -1,60 +1,74 @@
-aside.aside
+aside.sidebar
 	ul.mobile-type__list 
 		li.mobile-type__item
 			a.mobile-type__link(href="#") Флагманы
-		li.mobile-type__item
+		li.mobile-type__item.active
 			a.mobile-type__link(href="#") Бюджетная линейка
 	form.filters__form
 		ul.filters__list
 			li.filters__item
 				a.filters__link(href="#") Наличие в магазинах
 					i.arrow.icon arrow
-				div.filter__inner
-					ul.instore__list.radiogroup
-						li.instore__item
-							input.radio(type="radio" checked name="filter" id="all_stores")
-							label.label(for="all_stores") Во всех магазинах
-						li.instore__item
-							input.radio(type="radio" name="filter" id="nearest_store")
-							label.label(for="nearest_store") В ближайшем ко мне магазине
+				div.filter
+					ul.filter-instore__list.radiogroup
+						li.filter__item
+							label.filter__label
+								input.filter__select(type="radio" checked name="filter-instore")
+								span.filter-elem
+								span.filter-text Во всех магазинах
+						li.filter__item
+							label.filter__label
+								input.filter__select(type="radio" name="filter-instore")
+								span.filter-elem
+								span.filter-text В ближайшем ко мне магазине
 			li.filters__item
 				a.filters__link(href="#") Бренды
 					i.arrow.icon arrow
-				div.filter__inner
-					ul.brand__list.checkboxgroup
-						li.brand__item
-							input.checkbox(type="checkbox" name="lenovo" id="lenovo")
-							label.label(for="lenovo") Lenovo
-						li.brand__item
-							input.checkbox(type="checkbox" name="apple" id="apple")
-							label.label(for="apple") Apple
-						li.brand__item
-							input.checkbox(type="checkbox" name="samsung" id="samsung")
-							label.label(for="samsung") Samsung
-						li.brand__item
-							input.checkbox(type="checkbox" name="asus" id="asus")
-							label.label(for="asus") Asus
-						li.brand__item
-							input.checkbox(type="checkbox" name="motorola" id="motorola")
-							label.label(for="motorola") Motorola
+				div.filter
+					ul.filter-brand__list.checkboxgroup
+						li.filter__item
+							label.filter__label
+								input.filter__select(type="checkbox" checked name="lenovo")
+								span.filter-elem
+								span.filter-text Lenovo
+						li.filter__item
+							label.filter__label
+								input.filter__select(type="checkbox" checked name="apple")
+								span.filter-elem
+								span.filter-text Apple
+						li.filter__item
+							label.filter__label
+								input.filter__select(type="checkbox" checked name="samsung")
+								span.filter-elem
+								span.filter-text Samsung
+						li.filter__item
+							label.filter__label
+								input.filter__select(type="checkbox" name="asus")
+								span.filter-elem
+								span.filter-text Asus
+						li.filter__item
+							label.filter__label
+								input.filter__select(type="checkbox" name="motorola")
+								span.filter-elem
+								span.filter-text Motorola
 					a.filters__clear(href="#") Сбросить фильтр
 			li.filters__item
 				a.filters__link(href="#") Цена
 					i.arrow.icon arrow
-				div.filter__inner
-					div.money-range
-						div.money-range__money_begin
-							label.money-range__label(for="money-begin") от
-							input.money-range__money(type="text" id="money-begin")
-						div.money-range__money_end
-							label.money-range__label(for="money-end") до
-							input.money-range__money(type="text" id="money-end")
-					div.money-range__slider(id="slider-range")
+				div.filter
+					div.filter-price
+						div.filter-price__min
+							label.filter-price__label(for="money-begin") от
+							input.filter-price__money(type="text" data-min="0" id="money-begin" name="money-begin")
+						div.filter-price__max
+							label.filter-price__label(for="money-end") до
+							input.filter-price__money(type="text" data-max="25000" id="money-end" name="money-end")
+					div.filter-price__slider(id="price__slider")
 			li.filters__item
 				a.filters__link(href="#") Цвет
 					i.arrow.icon arrow
-				div.filter__inner
-					ul.color__list
+				div.filter
+					ul.filter-color__list
 						li.color__item
 							input.color__item-checkbox(id="color__white" type="checkbox" name="color")
 							label.color__item-label.color__white(for="color__white")
@@ -95,21 +109,31 @@ aside.aside
 			li.filters__item
 				a.filters__link(href="#") Операционные системы
 					i.arrow.icon arrow
-				div.filter__inner
-					ul.os__list.checkboxgroup
-						li.os__item
-							input.checkbox(type="checkbox" name="android" id="android")
-							label.label(for="android") Android
-						li.os__item
-							input.checkbox(type="checkbox" name="ios" id="ios")
-							label.label(for="ios") iOS
-						li.os__item
-							input.checkbox(type="checkbox" name="windowsmobile" id="windowsmobile")
-							label.label(for="windowsmobile") Windows Mobile
-						li.os__item
-							input.checkbox(type="checkbox" name="symbian" id="symbian")
-							label.label(for="symbian") Symbian
-						li.os__item
-							input.checkbox(type="checkbox" name="custom" id="custom")
-							label.label(for="custom") Custom
+				div.filter
+					ul.filter-os__list.checkboxgroup
+						li.filter__item
+							label.filter__label
+								input.filter__select(type="checkbox" name="android")
+								span.filter-elem
+								span.filter-text Android
+						li.filter__item
+							label.filter__label
+								input.filter__select(type="checkbox" name="ios")
+								span.filter-elem
+								span.filter-text iOS
+						li.filter__item
+							label.filter__label
+								input.filter__select(type="checkbox" name="windowsmobile")
+								span.filter-elem
+								span.filter-text Windows Mobile
+						li.filter__item
+							label.filter__label
+								input.filter__select(type="checkbox" name="symbian")
+								span.filter-elem
+								span.filter-text Symbian
+						li.filter__item
+							label.filter__label
+								input.filter__select(type="checkbox" name="custom")
+								span.filter-elem
+								span.filter-text Custom
 					a.filters__clear(href="#") Сбросить фильтр

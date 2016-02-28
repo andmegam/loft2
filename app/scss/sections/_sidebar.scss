@@ -1,0 +1,305 @@
+.mobile-type__list {
+	background-color: #fbfbfb;
+	border: solid 1px #dee1e4;
+	@include border-radius(5px);
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+
+.mobile-type__item {
+	border-top: solid 1px #dee1e4;
+	&.active {
+		background-color: #d9e5ea;
+	}
+
+	&:first-child {
+		border-top: 0;
+	}
+}
+
+.mobile-type__link {
+	display: block;
+	text-decoration: none;
+	font-size: 14px;
+	font-family: 'open_sansregular';
+	color: #5d656c;
+	padding: 12px 30px;
+}
+
+/*
+ * ФИЛЬТРЫ
+ */
+
+.filters__list {
+	background-color: #fbfbfb;
+	border: solid 1px #dee1e4;
+	@include border-radius(5px);
+}
+.filter {
+	display: none;
+	padding: 5px 30px 17px 30px;
+}
+// Шапка аккордеона
+.filters__item {
+	border-top: solid 1px #dee1e4;
+
+	&:first-child {
+		border-top: 0;
+	}
+}
+.filters__link {
+	padding: 11px 10px 11px 30px;
+	font-size: 16px;
+	font-family: 'open_sanssemibold';
+	text-decoration: none;
+	color: #333;
+	cursor: pointer;
+	width: 100%;
+	display: block;
+
+	&:hover {
+		.arrow {
+			display: block;
+			@include sprite($arrow);
+			font-size: 0;
+			float: right;
+			margin-right: 0px;
+			margin-top: 5px;
+			transform: rotate(180deg);
+		}
+	}
+
+	&.active {
+		.arrow {
+			transform: rotate(0deg);
+		}
+	}
+}
+
+// Наличие в магазинах
+.filter-instore__item {
+	margin-bottom: 15px;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+// Бренды
+.filter-brand__item {
+	margin-bottom: 15px;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
+// Сбросить фильтр
+.filters__clear {
+	display: block;
+	margin-top: 11px;
+	font-size: 14px;
+	font-family: 'open_sansregular';
+	color: #5DB2FC;
+
+}
+
+// Диапазон цен
+.filter-price {
+	font-size: 14px;
+	color: #333;
+	@extend %clearfix;
+	margin-top: 15px;
+	margin-bottom: 17px;
+	padding-right: 20px;
+}
+
+.filter-price__label {
+	font-family: 'open_sansregular';
+	margin-right: 10px;
+}
+
+.filter-price__min {
+	float: left;
+}
+
+.filter-price__max {
+	float: right;
+}
+
+.filter-price__money {
+	width: 81px;
+	height: 28px;
+	font-family: 'open_sanssemibold';
+	outline: 0;
+	padding: 0 12px;
+	@include border-radius(3px);
+	background-color: #fff;
+	-webkit-box-shadow: inset 0 1px 1px rgba(148,148,148,.43);
+	-moz-box-shadow: inset 0 1px 1px rgba(148,148,148,.43);
+	box-shadow: inset 0 1px 1px rgba(148,148,148,.43);
+	border: solid 1px #ebedef;
+}
+
+.filter-price__slider {
+	margin-right: 30px;
+	background-color : #dee1e4;
+	margin-bottom: 22px;
+}
+
+
+// Цвет
+.filter-color__list {
+	margin-top: 12px;
+	margin-bottom: -10px;
+	width: 250px;
+}
+.color__item {
+	display: inline-block;
+}
+.color__item-checkbox {
+	display: none;
+}
+.color__item-label {
+	display: inline-block;
+	content: "";
+	@include border-radius(2px);
+	cursor: pointer;
+	border: solid 1px #dee1e4;
+	margin: 0 17px 15px 0;
+	@extend %colorblock;
+
+	&:hover {border: solid 1.5px #F60;}
+
+	&.color__white {background-color: #FFF;}
+	&.color__very-light-grey {background-color: #cccccc;}
+	&.color__black {background-color: #000000;}
+	&.color__prussian-blue {background-color: #0a3153;}
+	&.color__red {background-color: #ff1800;}
+	&.color__yellow {background-color: #fff343;}
+	&.color__sunshade {background-color: #FB914A;}
+	&.color__gossip {background-color: #92C37C;}
+	&.color__summer-sky {background-color: #40A6FF;}
+	&.color__ce-soir {background-color: #9870AD;}
+	&.color__pale-violet-red {background-color: #DC78AD;}
+	&.color__russet {background-color: #7F401D;}
+}
+
+.color__item-checkbox:checked + .color__item-label {
+		border: solid 2.5px #F60;
+}
+
+// Операционные системы
+.filter-os__item {
+	margin-bottom: 15px;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
+.filter__label {
+	display: block;
+	cursor: pointer;
+	position: relative;
+	font-size: 14px;
+	font-family: 'open_sansregular';
+	color: #5d656c;
+}
+.filter__item {
+	margin-top: 15px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+.filter-text {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 10px;
+	margin-right: 15px;
+}
+
+.radiogroup .filter-elem {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #aaa;
+	position: relative;
+	@include border-radius(50%);
+
+	&:after {
+		content:'';
+		position: absolute;
+		width: 0px;
+		height: 0px;
+		top: 3px;
+		left: 3px;
+		background-color: #f60;
+		@include border-radius(50%);
+	}
+}
+
+.radiogroup .filter__select {
+	position: absolute;
+	top:0;
+	left: -9999px;
+
+	&:checked + .filter-elem {
+		border: 2px solid #F60;
+
+		&:after {
+			width: 10px;
+			height: 10px;
+		}
+	}
+
+	&:hover:not(:checked) + .filter-elem {
+		border: 2px solid #5d656c;
+
+		&:after {
+			width: 10px;
+			height: 10px;
+			background-color: #5D656C;
+		}
+	}
+}
+
+.checkboxgroup .filter-elem {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: #dee1e4;
+	position: relative;
+	@include border-radius(4px);
+
+
+	&:after {
+		content: "\f00c";
+		font-family: 'FontAwesome';
+		font-size: 16px;
+		padding: 2px;
+		color: #dee1e4;
+
+		text-align: center;
+		background-color: #dee1e4;
+		@include border-radius(4px);
+		border: none;
+	}
+}
+
+.checkboxgroup .filter__select {
+	position: absolute;
+	top:0;
+	left: -9999px;
+
+	&:checked + .filter-elem {
+
+		&:after {
+			color: #FFF;
+			background-color: #F60;
+		}
+	}
+
+	&:hover:not(:checked) + .filter-elem {
+		&:after {
+			color: #000;
+		}
+	}
+}

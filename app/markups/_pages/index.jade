@@ -1,85 +1,47 @@
 extends ../main
 
-
 block title 
 	| Каталог мобильныех телефонов
 
-block content_main 
-	main.main
-		section.view
-			div.sorting Сортировать по
-				select.sorting-list
-					option.sorting-item(value="sort-mony") по цене
-					option.sorting-item(value="sort-rating") по популярности
-			div.viewcatalog Вид каталога
-			ul.viewcatalog__list
-				li.viewcatalog__item.activ
-					a.viewcatalog__link.viewtable(href="#" id="viewtable" title="Таблица") viewtable
-				li.viewcatalog__item
-					a.viewcatalog__link.viewcontent(href="#" id="viewcontent" title="Содержимое") viewcontent
-				li.viewcatalog__item
-					a.viewcatalog__link.viewlist(href="#" id="viewlist" title="Список") viewlist
-		section.products.viewtable
-			ul.products__list
-				+product(samsung, path)
-				+product(lumia640, path)
-				+product(archos, path)
-				+product(alcatel, path)
-				+product(fly, path)
-				+product(highscreen, path)
-				
-		div.page-nav
-			ul.page-nav__list
-				li.page-nav__item
-					a.page-nav__link(href="#") &lt;
-				li.page-nav__item
-					a.page-nav__link(href="#") 1
-				li.page-nav__item
-					a.page-nav__link.activ(href="#") 2
-				li.page-nav__item
-					a.page-nav__link(href="#") 3
-				li.page-nav__item
-					a.page-nav__link(href="#") &gt;
-
-block content_bottom 
-	div.content_bottom
-		div.content_bottom_title
-			h2.title-section Важная информация
-		div.content_bottom_text
-			p.par
-				| Повседневная практика показывает, что сложившаяся структура организации влечет за собой
-				| процесс внедрения и модернизации позиций, занимаемых участниками в отношении 
-				| поставленных задач. Значимость этих проблем настолько очевидна, что реализация 
-				| намеченных плановых заданий в значительной степени обуславливает создание модели  
-				| развития. Таким образом консультация с широким активом представляет собой интересный 
-				| эксперимент проверки модели развития.
-
-			p.par
-				| Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет 
-				| оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким 
-				| бразом сложившаяся структура организации требуют определения и уточнения направлений 
-				| прогрессивного развития. Равным образом консультация с широким активом влечет за собой 
-				| процесс внедрения и модернизации соответствующий условий активизации
-			p.par
-				| Идейные соображения высшего порядка, а также начало повседневной работы по ормированию 
-				| позиции позволяет оценить значение соответствующий условий активизации. С другой 
-				| стороны сложившаяся структура организации позволяет оценить значение системы обучения 
-				| кадров, соответствует насущным потребностям.
-			p.par
-				| Повседневная практика показывает, что сложившаяся структура организации влечет за собой
-				| процесс внедрения и модернизации позиций, занимаемых участниками в отношении 
-				| поставленных задач. Значимость этих проблем настолько очевидна, что реализация 
-				| намеченных плановых заданий в значительной степени обуславливает создание модели  
-				| развития. Таким образом консультация с широким активом представляет собой интересный 
-				| эксперимент проверки модели развития.
-			p.par
-				| Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет 
-				| оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким 
-				| бразом сложившаяся структура организации требуют определения и уточнения направлений 
-				| прогрессивного развития. Равным образом консультация с широким активом влечет за собой 
-				| процесс внедрения и модернизации соответствующий условий активизации
-			p.par
-				| Идейные соображения высшего порядка, а также начало повседневной работы по ормированию 
-				| позиции позволяет оценить значение соответствующий условий активизации. С другой 
-				| стороны сложившаяся структура организации позволяет оценить значение системы обучения 
-				| кадров, соответствует насущным потребностям.
+block maincontent
+	include ../_sections/_breadcrumbs
+	article.maincontent
+		div.container
+			div.main-title
+				| Мобильные телефоны
+			include ../_sections/_sidebar
+			main.main
+				div.sort
+					div.sort__title Сортировать по
+						select.sort__list
+							option.sort__item(value="sort-mony") по цене
+							option.sort__item(value="sort-rating") по популярности
+					div.view Вид каталога
+					ul.view__list
+						li.view__item.active
+							a.view__link.view__table(href="#" id="view__table" title="Таблица") viewtable
+						li.view__item
+							a.view__link.view__content(href="#" id="view__content" title="Содержимое") viewcontent
+						li.view__item
+							a.view__link.view__list(href="#" id="view__list" title="Список") viewlist
+				div.products.view__table
+					ul.products__list
+						+product(samsung, path)
+						+product(lumia640, path)
+						+product(archos, path)
+						+product(alcatel, path)
+						+product(fly, path)
+						+product(highscreen, path)
+				div.page-nav
+					ul.page-nav__list
+						li.page-nav__item
+							a.page-nav__link(href="#") &lt;
+						li.page-nav__item
+							a.page-nav__link(href="#") 1
+						li.page-nav__item
+							a.page-nav__link.activ(href="#") 2
+						li.page-nav__item
+							a.page-nav__link(href="#") 3
+						li.page-nav__item
+							a.page-nav__link(href="#") &gt;
+		include ../_sections/_content-bottom

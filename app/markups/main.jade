@@ -9,22 +9,29 @@ html(lang='ru')
 	link(href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet")
 		
 	link(rel="stylesheet" href="css/main.css")
-	link(rel="stylesheet" href="css/jquery-ui.css")
+	//- link(rel="stylesheet" href="css/jquery-ui.css")
 	link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
 	link(rel="icon" href="img/favicon.ico" type="image/x-icon")
 	body.body
 		div.wrapper
 			include _sections/_header.jade
-			include _sections/_breadcrumbs.jade
+			include _sections/_navigation.jade
 
-			div.general
-				include _sections/_aside.jade
-				block content_main
-				block content_bottom
-			div.empty
-		footer.footer
-			include _sections/_footer.jade
+			div.maincontent
+				block maincontent
+				//include _sections/_breadcrumbs.jade
+				//include _sections/_breadcrumbs.jade
+				//include _sections/_sidebar.jade
+				//block content_main
+				//block content_bottom
+		include _sections/_footer.jade
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.12.0.min.js"><\/script>');</script>
+<script src="js/jquery.formstyler.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.columnizer.min.js"></script>
+<script src="js/main.js"></script>
 
 
 

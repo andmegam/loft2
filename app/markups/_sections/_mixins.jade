@@ -1,10 +1,10 @@
 -var path = "../";
--var path = "../loft2/";
+//-var path = "../loft2/";
 -
 	var samsung = {
 		'art': '189238',
 		'model': 'Samsung GT-I9301I GALAXY S 3',
-		'desc': 'Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц... ',
+		'desc': 'Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...',
 		'price': '11 290',
 		'foto1': 'img/products/samsung-1.png',
 		'foto2': 'img/products/samsung-2.png',
@@ -106,60 +106,58 @@
 		'g4':'Нет',
 		'gps':'Есть',
 		'reiting': '4.5'
-	}	
+	}
 
 mixin product(item, path)
 		li.products__item
-			div.tovar
-				div.tovar-foto
-					div.tovar-foto__large
-						img.tovar-foto__large-img(src=path+item.foto1 alt=item.model)
-					ul.tovar-foto-small__list
-						li.tovar-foto-small__item.activ
-							img.tovar-foto-small__item-img(src=path+item.foto1 alt=item.model)
-						li.tovar-foto-small__item
-							img.tovar-foto-small__item-img(src=path+item.foto2 alt=item.model)
-						li.tovar-foto-small__item
-							img.tovar-foto-small__item-img(src=path+item.foto3 alt=item.model)
-					div.tovar-art
-						span.tovar-art__type Артикул
-						span.tovar-art__number=item.art
-				div.tovar-descr
-					div.tovar-descr__name=item.model
-					div.tovar-descr__desc=item.desc
-					div.tovar-characteristics
-						ul.tovar-characteristics__list
-							li.tovar-characteristics__item
+			div.product
+				div.product-foto
+					div.product-foto__large
+						img.product-foto__large-img(src=path+item.foto1 alt=item.model)
+					ul.product-foto-small__list
+						li.product-foto-small__item.active
+							img.product-foto-small__item-img(src=path+item.foto1 alt=item.model)
+						li.product-foto-small__item
+							img.product-foto-small__item-img(src=path+item.foto2 alt=item.model)
+						li.product-foto-small__item
+							img.product-foto-small__item-img(src=path+item.foto3 alt=item.model)
+					div.product-art
+						span.product-art__type Артикул
+						span.product-art__number=item.art
+				div.product-descr
+					div.product-descr__name=item.model
+					div.product-descr__desc=item.desc
+					div.product-characteristics
+						ul.product-characteristics__list
+							li.product-characteristics__item
 								span.characteristics__type Тип SIM-карты
 								span.characteristics__desc=item.typesim
-							li.tovar-characteristics__item
+							li.product-characteristics__item
 								span.characteristics__type Количество SIM-карт
 								span.characteristics__desc=item.countsim
-							li.tovar-characteristics__item
+							li.product-characteristics__item
 								span.characteristics__type Цвет
 								span.characteristics__desc=item.color
-							li.tovar-characteristics__item
+							li.product-characteristics__item
 								span.characteristics__type ОС
 								span.characteristics__desc=item.os
-							li.tovar-characteristics__item
+							li.product-characteristics__item
 								span.characteristics__type Свзяь 3G
 								span.characteristics__desc=item.g3
-							li.tovar-characteristics__item
+							li.product-characteristics__item
 								span.characteristics__type 4G(LTE)
 								span.characteristics__desc=item.g4
-							li.tovar-characteristics__item
+							li.product-characteristics__item
 								span.characteristics__type GPS-модуль
 								span.characteristics__desc=item.gps
-					div.tovar-descr__rating
-						span.tovar-descr__rating-item(data-rating=item.reiting)
-							span.fill-rating
-						span.rating__number=item.reiting
-				div.tovar-money
-					div.tovar-money__price
-						span.tovar-money__price__number=item.price
-						i.fa.fa-rub
-					div.tovar-money__addtocart
-						button.tovar-money__addtocart__btn(type="submit") В корзину
-					div.tovar-money__outofstock
-						i.fa.fa-circle.tovar-money__outofstock__point
-						span.tovar-money__outofstock__status В наличии
+					div.product-rating
+						span.product-rating__item(data-rating=item.reiting)
+							span.product-rating__stars
+						span.product-rating__number=item.reiting
+				div.product-money
+					div.product-money__price
+						span.product-money__price-number=item.price
+					div.product-money__addtocart
+						button.addtocart__btn(type="submit") В корзину
+					div.product-money__outofstock
+						span.product-money__outofstock-status В наличии

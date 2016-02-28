@@ -1,0 +1,33 @@
+$width-site: 1130px;
+.wrapper {
+	min-height: 100%;
+	min-width: $width-site;
+	height: auto !important;
+	height: 100%;
+	font-family: 'open_sansregular';
+	color: #333;
+}
+
+.container {
+	width: $width-site;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.maincontent {
+	margin-bottom: 230px;
+}
+
+.sidebar {
+	display: table-cell;
+	vertical-align: top;
+	width: 333px;
+}
+
+.main {
+	display: table-cell;
+	vertical-align: top;
+	min-width: 742px;
+	padding-left: 25px;
+}
+

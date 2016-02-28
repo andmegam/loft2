@@ -1,0 +1,27 @@
+.sort {
+	@include border-radius(5px);
+	background-color: #e4ebee;
+	border: solid 1px #dee1e4;
+	display: table;
+	width: 100%;
+	min-width: 742px;
+	height: 55px;
+	padding-left: 25px;
+	font-size: 14px;
+	font-family: 'open_sansregular';
+	color: #5d656c;
+	margin-bottom: 18px;
+}
+
+.sort__title {
+	display: table-cell;
+	vertical-align: middle;
+	width: 350px;
+}
+
+.sort__list {
+	font-size: 14px;
+	font-family: 'open_sanslight';
+	padding: 2px 10px;
+	width: 200px;
+}

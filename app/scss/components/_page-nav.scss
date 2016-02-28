@@ -1,0 +1,27 @@
+// Постараничная навигация
+.page-nav {
+	text-align: right;
+}
+
+.page-nav__item {
+	display: inline-block;
+}
+
+.page-nav__link {
+	text-align: center;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	font-size: 12px;
+	font-family: 'open_sansbold';
+	color: #7f7f7f;
+	padding-top: 2px;
+	@include border-radius(3px);
+	background-color: #fbfbfb;
+	border: 1px solid #DEE1E4;
+	text-decoration: none;
+
+	&:hover, &.activ {
+		background-color: #E0E0E0;
+	}
+}

@@ -1,0 +1,33 @@
+.nav {
+	background-color: #FFF;
+	border-bottom: 2px solid  #ebedef;
+	text-align: center;
+}
+
+.nav__list {
+	font-size: 0;
+}
+.nav__item {
+	display: inline-block;
+
+	&:hover {
+		background-color: #e4e2e2;
+	}
+
+	&.active {
+		background-color: #F60;
+		.nav__link {
+			color: #FFF;
+		}
+
+	}
+}
+
+.nav__link {
+	display: inline-block;
+	padding: 15px 13px;
+	font-size: 16px;
+	font-family: 'open_sanssemibold';
+	color: #5d656c;
+	text-decoration: none;
+}

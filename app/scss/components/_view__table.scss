@@ -1,0 +1,137 @@
+// Первый вид
+.view__table {
+
+	& .products__item {
+		padding: 20px 25px 13px 20px;
+	}
+
+	& .product {
+		display: table;
+		position: relative;
+	}
+	/*------------- foto begin ------------- */
+	& .product-foto {
+		display: table-cell;
+		width: 140px;
+	}
+
+	& .product-foto__large {
+		max-width: 136px;
+		max-height: 136px;
+		background-color: #FFF;
+		border: 1px solid #dee1e4;
+		padding: 5px;
+		text-align: center;
+		@include border-radius(2px);
+		margin-bottom: 15px;
+	}
+
+	& .product-foto-small__list {
+		margin-bottom: 4px;
+	}
+
+	& .product-foto-small__item {
+		width: 35px;
+		height: 35px;
+		display: inline-block;
+		@include border-radius(2px);
+		border: 1px solid #dee1e4;
+		text-align: center;
+		vertical-align: middle;
+		margin-right: 10px;
+		padding: 2px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover, &.active {
+			border: 1px solid #F60;
+			cursor: pointer;
+		}
+	}
+
+	& .product-foto-small__item-img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	/*------------- foto end -------------- */
+
+	/*------------- product-art begin ----- */
+	& .product-art {
+		text-align: center;
+	}
+
+	& .product-art__type {
+		font-size: 12px;
+		font-family: 'open_sansbold';
+		margin-right: 5px;
+		color: #7f7f7f;
+	}
+
+	& .product-art__number {
+		font-size: 14px;
+		font-family: 'open_sansbold';
+		color: #333;
+	}
+	/*------------- product-art end -------- */
+
+	/*------------- product-descr begin ---- */
+	& .product-descr {
+		display: table-cell;
+		vertical-align: top;
+		width: 430px;
+		padding: 0 22px;
+		font-size: 16px;
+	}
+
+	& .product-descr__name {
+		font-size: 16px;
+		padding: 5px 0 20px 0;
+		font-family: 'open_sanssemibold';
+	}
+
+	& .product-descr__desc {
+		font-size: 14px;
+		overflow: hidden;
+		font-family: 'open_sansregular';
+		margin-bottom: 18px;
+	}
+	/*------------- product-descr end ------ */
+
+	& .product-characteristics {
+		display: none;
+	}
+
+	/*------------- product-money begin ------ */
+	& .product-money {
+		display: table-cell;
+		width: 125px;
+		vertical-align: top;
+		position: relative;
+
+		&:after {
+			content : "";
+			width: 1px;
+			position: absolute;
+			top:0;
+			height: 95%;
+			background-color: #dee1e4;
+		}
+	}
+
+	& .product-money__price {
+		text-align: right;
+		margin-bottom: 125px;
+	}
+
+	& .product-money__addtocart {
+		width: 100%;
+		text-align: right;
+	}
+
+	& .product-money__outofstock {
+		text-align: right;
+	}
+	/*------------- product-money end ------ */
+}

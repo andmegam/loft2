@@ -3,6 +3,11 @@
   init();
   attachEvents();
 
+  $('.filter__radio').on('click', function(e){
+      var radio = $(this).prop("checked");
+      console.log(radio);
+  });
+
   /**
    * Инициализация
    */
@@ -18,8 +23,8 @@
    */
   function attachEvents() {
     $('.filters__clear').on('click', clearCheckbox);
-    $('.viewcatalog__item').on('click', updateViewCatalog);
-    $('.tovar-foto-small__item').on('click', getNewFotoTovar);
+    $('.view__item').on('click', updateViewCatalog);
+    $('.product-foto-small__item').on('click', getNewFotoTovar);
     $('.rating__number').bind('DOMSubtreeModified', changeRating);
   }
 
@@ -71,9 +76,9 @@
    * Разбиение текста на две колонки
    */
    function setColumnize (){
-      var blockcolumnize = $('.content_bottom_text');
+      var blockcolumnize = $('.content-bottom__text');
 
-        blockcolumnize.children('.par').addClass('dontsplit');
+        blockcolumnize.children('p').addClass('dontsplit');
         blockcolumnize.columnize({columns:2});
    }
 
@@ -93,19 +98,25 @@
    * Выставление диапазона цен
    */
   function sliderMoney() {
-    $('#slider-range').slider({
+     var $slider = $('#price__slider'),
+         $databegin = $('#money-begin'),
+         $dataend = $('#money-end'),
+         min = parseInt($databegin.attr('data-min')),
+         max = parseInt($dataend.attr('data-max'));
+
+    $slider.slider({
       range: true,
-      min: 0,
-      max: 25000,
-      values: [ 100, 13000 ],
+      min: min,
+      max: max,
+      values: [ min, max ],
       slide: function( event, ui ) {
-        $("#money-begin").val(ui.values[0]);
-        $("#money-end").val(ui.values[1]);
+        $databegin.val(ui.values[0]);
+        $dataend.val(ui.values[1]);
       }
     });
 
-    $("#money-begin").val($('#slider-range').slider( "values", 0 ));
-    $("#money-end").val($('#slider-range').slider( "values", 1 ));
+    $databegin.val($slider.slider( 'values', 0 ));
+    $dataend.val($slider.slider( 'values', 1 ));
   }
 
   /**
@@ -115,13 +126,13 @@
     event.preventDefault();
     var $this = $(this),
         view = $this
-                .find('.viewcatalog__link')
+                .find('.view__link')
                 .attr('id');
 
       $this
-        .addClass('activ')
+        .addClass('active')
         .siblings()
-        .removeClass('activ');
+        .removeClass('active');
 
       $('.products')
         .removeClass()
@@ -134,41 +145,41 @@
   function getNewFotoTovar (event) {
     event.preventDefault();
     var $this = $(this),
-        activimg = $this.find('.tovar-foto-small__item-img').attr('src'),
-        $setimg = $this.closest('.tovar-foto').find('.tovar-foto__large-img');
+        activimg = $this.find('.product-foto-small__item-img').attr('src'),
+        $setimg = $this.closest('.product-foto').find('.product-foto__large-img');
 
       $setimg.attr('src', activimg);
 
       $this
-        .addClass('activ')
+        .addClass('active')
         .siblings()
-        .removeClass('activ');
+        .removeClass('active');
   };
 })();
 
 /**
  * Фильтрация товара - Аккордеон
  */
-(function(){
+(function($){
    $('.filters__link').on('click', function(event){
     event.preventDefault();
     var $this = $(this),
         item = $this.closest('.filters__item'),
         list = $this.closest('.filters__list'),
         items = list.find('.filters__link'),
-        content= item.find('.filter__inner'),
-        otherContent = list.find('.filter__inner'),
+        content= item.find('.filter'),
+        otherContent = list.find('.filter'),
         duration = 300;
 
-    if (!$this.hasClass('activ')) {
+    if (!$this.hasClass('active')) {
       // Открытие контента
       content.stop(true, true).slideDown(duration);
-      $this.addClass('activ');
+      $this.toggleClass('active');
 
     }else {
       // Закрытие контента
       content.stop(true, true).slideUp(duration);
-      $this.removeClass('activ');
+      $this.toggleClass('active');
     }
   });
-})();
+})(jQuery);
